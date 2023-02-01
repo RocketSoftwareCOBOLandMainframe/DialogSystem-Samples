@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{535C04D7-A2A5-47C7-83E0-B340A995CD1F}") = "WPFCustGrid", "WPFCustGrid.cblproj", "{A69A73D4-248C-47AE-B74E-EC5EA697617D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4635E8C9-7BED-41DE-8716-224A2F994BEB} = {4635E8C9-7BED-41DE-8716-224A2F994BEB}
+	EndProjectSection
+EndProject
+Project("{535C04D7-A2A5-47C7-83E0-B340A995CD1F}") = "WPFGridViewUserControl", "GridControl\WPFGridViewUserControl.cblproj", "{4635E8C9-7BED-41DE-8716-224A2F994BEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A69A73D4-248C-47AE-B74E-EC5EA697617D}.Debug|x86.ActiveCfg = Debug|x86
+		{A69A73D4-248C-47AE-B74E-EC5EA697617D}.Debug|x86.Build.0 = Debug|x86
+		{A69A73D4-248C-47AE-B74E-EC5EA697617D}.Release|x86.ActiveCfg = Release|x86
+		{A69A73D4-248C-47AE-B74E-EC5EA697617D}.Release|x86.Build.0 = Release|x86
+		{4635E8C9-7BED-41DE-8716-224A2F994BEB}.Debug|x86.ActiveCfg = Debug|x86
+		{4635E8C9-7BED-41DE-8716-224A2F994BEB}.Debug|x86.Build.0 = Debug|x86
+		{4635E8C9-7BED-41DE-8716-224A2F994BEB}.Release|x86.ActiveCfg = Release|x86
+		{4635E8C9-7BED-41DE-8716-224A2F994BEB}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

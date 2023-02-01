@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{26964003-3860-4B29-B037-547E0F4E2361}</ProjectGuid>
+    <OutputName>SplitWindow</OutputName>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SplitWindow</RootNamespace>
+    <COBOLProjectType>Native</COBOLProjectType>
+    <ProjectCopybookPaths></ProjectCopybookPaths>
+    <StartupObject>SPLITTER</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>.\bin\x86\Debug\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <ManagedCode>False</ManagedCode>
+    <DebugSymbols>True</DebugSymbols>
+    <WarningLevel>1</WarningLevel>
+    <MaxError>100</MaxError>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>.\bin\x86\Release\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <ManagedCode>False</ManagedCode>
+    <DebugSymbols>False</DebugSymbols>
+    <WarningLevel>2</WarningLevel>
+    <MaxError>100</MaxError>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="CNRACC1.ICO" />
+    <None Include="CNRACC2.ICO" />
+    <None Include="CNRACC3.ICO" />
+    <None Include="CNRACC4.ICO" />
+    <None Include="CNRACC5.ICO" />
+    <None Include="CNRACC6.ICO" />
+    <None Include="CNRACC7.ICO" />
+    <None Include="CNRACC8.ICO" />
+    <None Include="CNRACC9.ICO" />
+    <None Include="CNRCOMP1.ICO" />
+    <None Include="CNRCOMP2.ICO" />
+    <None Include="CNRCOMP3.ICO" />
+    <None Include="INVENTORY.DAT">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="MFRES.H" />
+    <None Include="SPLIT.TXT" />
+    <None Include="SPLITTER.CPB" />
+    <Content Include="SPLITTER.GS">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CPARENT.CBL" />
+    <Compile Include="LVIEWCTRL.CBL" />
+    <Compile Include="SPLITTER.CBL" />
+    <Compile Include="TVIEWCTRL.CBL" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Micro Focus\Visual COBOL\v1.0\MicroFocus.COBOL.targets" />
+</Project>

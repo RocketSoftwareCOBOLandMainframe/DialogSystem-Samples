@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{A130ECB0-CD2D-4682-BC07-D38A4136CDD6}</ProjectGuid>
+    <OutputName>CustGrid</OutputName>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CustGrid</RootNamespace>
+    <COBOLProjectType>Native</COBOLProjectType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>.\bin\x86\Debug\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <ManagedCode>False</ManagedCode>
+    <DebugSymbols>True</DebugSymbols>
+    <WarningLevel>1</WarningLevel>
+    <MaxError>100</MaxError>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>.\bin\x86\Release\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <ManagedCode>False</ManagedCode>
+    <DebugSymbols>False</DebugSymbols>
+    <WarningLevel>1</WarningLevel>
+    <MaxError>100</MaxError>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="..\CustomerData\CUST.IDX">
+      <Link>CUST.IDX</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\CustomerData\CUST.ISM">
+      <Link>CUST.ISM</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="CUSTGRID.CPB" />
+    <Content Include="CUSTGRID.GS">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="CUSTGRIDNP.CPB" />
+    <None Include="CUSTTBDEFN.CPY" />
+    <None Include="GRIDOCX.CPY" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CUSTGRID.CBL">
+      <Dialect>MF</Dialect>
+    </Compile>
+    <Compile Include="CUSTSBAR.CBL" />
+    <Compile Include="CUSTSPIN.CBL" />
+    <Compile Include="CUSTTB.CBL" />
+    <Compile Include="CUSTVIEW.CBL" />
+    <Compile Include="GRIDCTRL.CBL" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Micro Focus\Visual COBOL\v1.0\MicroFocus.COBOL.targets" />
+</Project>

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{535C04D7-A2A5-47C7-83E0-B340A995CD1F}") = "ManagedCustomer", "ManagedCustomer\ManagedCustomer.cblproj", "{4AD22F40-CAF7-4198-BDE9-60384B1D212F}"
+EndProject
+Project("{535C04D7-A2A5-47C7-83E0-B340A995CD1F}") = "OrderFormsLibrary", "OrderFormsLibrary\OrderFormsLibrary.cblproj", "{E79E3EB4-5AEC-461A-9516-A47041BC5CE1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4AD22F40-CAF7-4198-BDE9-60384B1D212F}.Debug|x86.ActiveCfg = Debug|x86
+		{4AD22F40-CAF7-4198-BDE9-60384B1D212F}.Debug|x86.Build.0 = Debug|x86
+		{4AD22F40-CAF7-4198-BDE9-60384B1D212F}.Release|x86.ActiveCfg = Release|x86
+		{4AD22F40-CAF7-4198-BDE9-60384B1D212F}.Release|x86.Build.0 = Release|x86
+		{E79E3EB4-5AEC-461A-9516-A47041BC5CE1}.Debug|x86.ActiveCfg = Debug|x86
+		{E79E3EB4-5AEC-461A-9516-A47041BC5CE1}.Debug|x86.Build.0 = Debug|x86
+		{E79E3EB4-5AEC-461A-9516-A47041BC5CE1}.Release|x86.ActiveCfg = Release|x86
+		{E79E3EB4-5AEC-461A-9516-A47041BC5CE1}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

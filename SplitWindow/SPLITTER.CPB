@@ -1,0 +1,63 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 DATA-BLOCK-VERSION-NO              PIC 9(8) COMP-5
+                                             VALUE 11.
+
+       01 VERSION-NO                         PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 SET-BUILD-NO                       PIC 9(4) COMP-5
+                                             VALUE 63.
+
+       01 DATA-BLOCK.
+          03 EXIT-FLAG                       PIC 9.
+             88 EXIT-FLAG-TRUE               VALUE 1.
+          03 CONFIG-FLAG                     PIC x(4) COMP-5.
+          03 CONFIG-VALUE                    PIC x(4) COMP-5.
+          03 TVIEW-OBJECT OBJECT REFERENCE.
+          03 LVIEW-OBJECT OBJECT REFERENCE.
+          03 SPLITTER-WINDOW OBJECT REFERENCE.
+          03 FUNCTION-DATA.
+             05 WINDOW-HANDLE                PIC x(4) COMP-5.
+             05 OBJECT-REFERENCE OBJECT REFERENCE.
+             05 CALL-FUNCTION                PIC X(30).
+             05 NUMERIC-VALUE                PIC x(4) COMP-5.
+             05 NUMERIC-VALUE2               PIC x(4) COMP-5.
+             05 SIZE-WIDTH                   PIC x(4) COMP-5.
+             05 SIZE-HEIGHT                  PIC x(4) COMP-5.
+             05 POSITION-X                   PIC x(4) COMP-5.
+             05 POSITION-Y                   PIC x(4) COMP-5.
+             05 IO-TEXT-BUFFER               PIC X(256).
+             05 IO-TEXT-BUFFER2              PIC X(256).
+          03 ATVIEW-PARMS.
+             04 ATVIEW-PARMS-ITEM            OCCURS 99.
+                05 ITEM-TEXT                 PIC X(50).
+                05 ITEM-PARENT               PIC x(4) COMP-5.
+                05 ITEM-REFERENCE OBJECT REFERENCE.
+      *
+      * This group maps to n columns and defines
+      * one row
+          03 LVIEW-ITEM.
+             04 LVIEW-ITEM-ITEM              OCCURS 4.
+                05 LVITEM-TEXT               PIC X(31).
+                05 LVITEM-LENGTH             PIC x(4) COMP-5.
+                05 LVITEM-OBJECT OBJECT REFERENCE.
+      *
+      * This group maps to nnn rows and contains
+      * row data
+          03 LVIEW-DATA.
+             04 LVIEW-DATA-ITEM              OCCURS 999.
+                05 LVDATA-ICON               PIC X.
+                05 LVDATA-OBJECT OBJECT REFERENCE.
+                05 LVDATA-COLUMN1            PIC X(31).
+                05 LVDATA-COLUMN2            PIC X(31).
+                05 LVDATA-COLUMN3            PIC X(31).
+                05 LVDATA-COLUMN4            PIC X(31).
+          03 LVDATA-MAX                      PIC x(2) COMP-X.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************

@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{535C04D7-A2A5-47C7-83E0-B340A995CD1F}") = "SplitWindow", "SplitWindow.cblproj", "{26964003-3860-4B29-B037-547E0F4E2361}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9BF8844A-D508-4E56-A6DC-15878955B7AA} = {9BF8844A-D508-4E56-A6DC-15878955B7AA}
+	EndProjectSection
+EndProject
+Project("{535C04D7-A2A5-47C7-83E0-B340A995CD1F}") = "lvicons", "lvicons.cblproj", "{9BF8844A-D508-4E56-A6DC-15878955B7AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26964003-3860-4B29-B037-547E0F4E2361}.Debug|x86.ActiveCfg = Debug|x86
+		{26964003-3860-4B29-B037-547E0F4E2361}.Debug|x86.Build.0 = Debug|x86
+		{26964003-3860-4B29-B037-547E0F4E2361}.Release|x86.ActiveCfg = Release|x86
+		{26964003-3860-4B29-B037-547E0F4E2361}.Release|x86.Build.0 = Release|x86
+		{9BF8844A-D508-4E56-A6DC-15878955B7AA}.Debug|x86.ActiveCfg = Debug|x86
+		{9BF8844A-D508-4E56-A6DC-15878955B7AA}.Debug|x86.Build.0 = Debug|x86
+		{9BF8844A-D508-4E56-A6DC-15878955B7AA}.Release|x86.ActiveCfg = Release|x86
+		{9BF8844A-D508-4E56-A6DC-15878955B7AA}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

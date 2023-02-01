@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{F9471E44-C7E7-4024-8365-1040F279257F}</ProjectGuid>
+    <OutputName>Customer</OutputName>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <COBOLProjectType>Native</COBOLProjectType>
+    <ProjectCopybookPaths>
+    </ProjectCopybookPaths>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>.\bin\x86\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <WarningLevel>2</WarningLevel>
+    <SourceFormat>Fixed</SourceFormat>
+    <ManagedCode>False</ManagedCode>
+    <IntermediatePath>.\obj\x86\Debug\</IntermediatePath>
+    <PlatformTarget>x86</PlatformTarget>
+    <NativeGraphicalApplication>True</NativeGraphicalApplication>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>.\bin\x86\Release\</OutputPath>
+    <DebugSymbols>false</DebugSymbols>
+    <WarningLevel>2</WarningLevel>
+    <SourceFormat>Fixed</SourceFormat>
+    <ManagedCode>False</ManagedCode>
+    <IntermediatePath>.\obj\x86\Release\</IntermediatePath>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CUSTOMER.CBL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\CustomerData\CUST.IDX">
+      <Link>CUST.IDX</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\CustomerData\CUST.ISM">
+      <Link>CUST.ISM</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="app1.manifest" />
+    <None Include="CUSTOMER.CPB" />
+    <Content Include="CUSTOMER.ERR">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CUSTOMER.GS">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Micro Focus\Visual COBOL\v1.0\MicroFocus.COBOL.targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>

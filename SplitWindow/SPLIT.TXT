@@ -1,0 +1,105 @@
+   *********************************************************************
+
+                        Micro Focus Dialog System V3.0
+
+                        Splitter window Demonstration
+
+   *********************************************************************
+
+
+
+   Overview
+   --------
+
+   The SPITTER screenset is provided as an example of how to use a Dialog
+   System window as a frame to contain child windows or objects, which react
+   in a synchronized manner to window resizing, or dragging of the vertical
+   splitter bar that divides the window frame client area.
+
+   When used with TreeView and ListView controls, this implementation gives a
+   true emulation of the Windows Explorer style user interface for your
+   application.
+
+   Files required
+   --------------
+
+   The files needed to run the demonstration program are:
+
+        Name of the file     Description of the file
+        ----------------     -----------------------
+        SPLITTER.GS          The demonstration screenset
+        SPLITTER.CBL         The application program
+         - splitter.cpb      Screenset datablock copyfile
+         - ds-cntrl.mf       Dialog System Control Block copyfile
+
+        LVIEWCTRL.CBL        List Control program
+         - splitter.cpb      Screenset datablock copyfile
+         - strcture.cpy      Control Program interface copyfile
+         - p2cevent.cpy      Class library event code identifier copyfile
+         - ds-call.cpy       Screenset CALLOUT Control block
+         - userctrl.cpy      Dialog System runtime/Control program interface
+                             definition
+         - keys.cpy          Class library key code identifier copyfile
+         - callconv.cpy      Calling conventions copy file used in API calls
+
+        TVIEWCTRL.CBL        Tree Control program
+         - splitter.cpb      Screenset datablock copyfile
+         - strcture.cpy      Control Program interface copyfile
+         - p2cevent.cpy      Class library event code identifier copyfile
+         - ds-call.cpy       Screenset CALLOUT Control block
+         - userctrl.cpy      Dialog System runtime/Control program interface
+                             definition
+
+        CPARENT.CBL          Splitter Window creation program
+
+        LVICONS.DLL          Resource DLL containing icon images used
+                             NOTE: The icons are provided in the LVIEW
+                             demonstration directory. That project also
+                             illustrates how to build the DLL used in this
+                             demonstration.
+
+        INVENTORY.DAT        The data file used for the demonstration
+
+        SPLIT.APP            The Net Express project file
+
+        SPLIT.TXT            This document.
+
+
+   Running The Demonstration Program
+   ---------------------------------
+
+   Load the supplied SPLIT.APP file into your Net Express IDE and
+   select the Project/Rebuild All menu choice.
+
+
+   Features
+   --------
+
+   At window creation time, the Dialog System runtime encounters the objects
+   defined on the window, and calls the "create" entry point in the controls
+   associated program. This program places the controls on the newly created
+   window.
+
+   Following creation, screenset dialog makes a CALLOUT to the cParent program,
+   which modifies the frame window to be an object of the splitwindow class. The
+   initial split position is provided to the object instance, derived from the X
+   (indent from left) position of the rightmost (List View) control.
+
+   The splitter window is now active and the Windows Explorer style application
+   runs.
+
+   This demonstration populates a Tree Control from a sequential data file, and
+   shows how Tree item selection causes the population of the accompanying List
+   control with data from the selected Tree data category.
+
+   Note that Dialog System Dynamic resizing functionality is NOT enabled in this
+   application, but it is possible to size the main frame window, and move the
+   vertical splitter bar, and the controls automatically resize to fill their
+   parents' client area. You should not use the Dynamic Resizing functionality
+   with splitter windows, as the results will be undefined.
+
+   This is just one demonstration of how these controls are used in a split
+   window context. See also the TVIEW and LVIEW demonstrations for more details
+   on specific control functions.
+
+

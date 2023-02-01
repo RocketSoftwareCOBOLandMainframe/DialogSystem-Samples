@@ -1,0 +1,12 @@
+#define ID_CNRCOMP3  212
+#define ID_CNRCOMP2  211
+#define ID_CNRCOMP1  210
+#define ID_CNRACC9  209
+#define ID_CNRACC8  208
+#define ID_CNRACC7  207
+#define ID_CNRACC6  206
+#define ID_CNRACC5  205
+#define ID_CNRACC4  204
+#define ID_CNRACC3  203
+#define ID_CNRACC2  202
+#define ID_CNRACC1  201

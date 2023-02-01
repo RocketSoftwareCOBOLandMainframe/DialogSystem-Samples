@@ -1,0 +1,42 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 DATA-BLOCK-VERSION-NO              PIC 9(8) COMP-5
+                                             VALUE 1.
+
+       01 VERSION-NO                         PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 SET-BUILD-NO                       PIC 9(4) COMP-5
+                                             VALUE 15.
+
+       01 DATA-BLOCK.
+          03 EXIT-FLAG                       PIC 9.
+             88 EXIT-FLAG-TRUE               VALUE 1.
+          03 DISPLAY-VALUE                   PIC S9(18).
+          03 KEY-VALUE                       PIC X.
+          03 ERROR-CODE                      PIC 9(4).
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 FIELD-NUMBERS.
+          03 FLD-NO-EXIT-FLAG                PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 FLD-NO-DISPLAY-VALUE            PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 FLD-NO-KEY-VALUE                PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 FLD-NO-ERROR-CODE               PIC 9(4) COMP-5 VALUE
+                                               4.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************
