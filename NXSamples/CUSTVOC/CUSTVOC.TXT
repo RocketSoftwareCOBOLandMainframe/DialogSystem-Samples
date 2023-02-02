@@ -1,0 +1,85 @@
+   *********************************************************************
+
+                       Micro Focus Dialog System V3.0
+
+                       CUSTVOC Demonstration Program
+
+   *********************************************************************
+
+
+   CUSTVOC Demonstration Program
+   -----------------------------
+
+
+   Overview
+   --------
+
+   This CUSTVOC example shows how you can embed Dialog System functions
+   within a COBOL program.
+
+   CUSTVOC is a re-working of the CUSTOMER Dialog System demo.
+
+
+   Files Required
+   --------------
+
+   The files needed to build and run the demonstration program are:
+
+   Name of the file     Description of the file
+   ----------------     -----------------------------------------------------
+     CUSTVOC.GS           The CUSTVOC Dialog System screenset.
+
+     CUSTVOC.CBL          The main CUSTVOC COBOL program.
+      - custvoc.cpy       The screenset Vocabulary copybook
+      - custvoc.cpb       The screenset data block copybook
+      - ds-cntrl.mf       Dialog System control file.
+      - dslang.cpy        Copy file to add dialog syntax to the COBOL
+                          language.
+
+     VOCCLR.CBL           CALLOUT COBOL programs containing dialog script.
+     VOCDEL.CBL
+     VOCDELI.CBL
+     VOCESC.CBL
+     VOCLOAD.CBL
+     VOCOK.CBL
+     VOCORD.CBL
+     VOCPROC.CBL
+     VOCSAVE.CBL
+      - ds-call.cpy       Dialog System CALLOUT interface COPY file (used
+                          by all of these programs).
+      - dslang.cpy        Copy file to add dialog syntax to the COBOL
+                          language (used by all of these programs).
+
+     VOCCOMP.BAT          DOS batch file to compile the CUSTVOC programs.
+
+     CUSTVOC.TXT          This CUSTVOC document
+     CUSTVOC.APP          The CUSTVOC Net Express project file
+
+
+   Compiling and Running The Demonstration Program
+   -----------------------------------------------
+
+   In order to run the CUSTVOC demonstration, you need to compile the
+   COBOL program supplied with the demonstration.
+
+   Select the Rebuild option from Project on the main menu to compile
+   all of the programs in the project to INT code.
+
+   To run the program having created the .INT files as detailed above,
+   run or animate the program CUSTVOC.INT.
+
+
+   Extra Notes
+   -----------
+
+   The majority of the Dialog functons that used to be embedded in the
+   screenset can now be found in the several sub-programs that make up
+   CUSTVOC. Where the screenset in the CUSTOMER demo would execute the
+   functions in the screenset, CUSTVOC instead uses CALLOUT to execute a
+   particular COBOL entry point where the functions can be found instead.
+
+   When you compile a program from within the Net Express IDE, the
+   INT and IDY files may (depending on your project's build type) be
+   placed in a directory below your working directory. When running the
+   demonstration outside of the IDE you must make sure the project build
+   directory is on your COBDIR.

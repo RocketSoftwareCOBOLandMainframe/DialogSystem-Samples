@@ -1,0 +1,39 @@
+; This file is maintained by HCW. Do not modify this file directly.
+
+[OPTIONS]
+COMPRESS=12 Hall Zeck
+ERRORLOG=moufunc.log
+LCID=0x409 0x2 0x0 ; English (United States)
+REPORT=Yes
+TITLE=Dialog System Help Demo
+CNT=moufunc.cnt
+COPYRIGHT=Copyright (C) 2003 Micro Focus International Ltd. All rights reserved.
+IGNORE=3022            ; emdash.bmp already used as non-transparent
+IGNORE=h2002             ; Suppress duplicate keywords with different capitaization
+IGNORE=hc3071              ; Browse buttons not enabled
+HLP=moufunc.hlp
+
+[FILES]
+moufunc.rtf
+
+[MAP]
+#include moufunc.map
+
+[WINDOWS]
+main="Dialog System Help Demo",,28676
+task="Net Express",(620,119,380,749),20740,(r14680063),(r14680063),f3
+glos="Net Express",(138,143,600,420),20740
+em="Net Express",(114,189,637,183),4,,,f2
+example="Net Express",(48,465,916,505),20740
+tip="Net Express",(460,195,307,500),4,(r16777088),(r16777088),f2
+map="Net Express",,20740,,,f2
+rules="Net Express",(150,190,650,750),4,,,f2; Windowing syntax rules
+
+[CONFIG]
+AppendItem(MNU_HELP,"h_ho","U&sing help","HelpON()")            ; Add Using help to the help menu
+CB(ovw,Overview,Finder())
+DB(ovw)               ; Disable overview button
+BrowseButtons()
+
+[CONFIG-glos]
+CB(top,Top,"JI('>glos','rh_glos')")           ; Jumps to top of glossary

@@ -1,0 +1,66 @@
+   *********************************************************************
+
+                          Micro Focus Dialog System V3
+
+                    Using Windows Image formats Demonstration
+
+   *********************************************************************
+
+
+
+   Overview
+   --------
+
+   This demonstration illustrates how to use native win32 tooltips with
+   Dialog System applications.
+
+
+
+   Files required
+   --------------
+
+   The files needed to run the demonstration program are:
+
+        Name of the file     Description of the file
+        ----------------     -----------------------
+        TTIPDEMO.GS          The demonstration screenset
+        TTIPDEMO.CBL         The application program
+         - ttipdemo.cpb      Screenset datablock copyfile
+         - ds-cntrl.mf       Dialog System Control Block copyfile
+
+        TOOLTIP.APP          The Net Express project file
+
+        TOOLTIP.TXT          This document.
+
+
+   Running The Demonstration Program
+   ---------------------------------
+
+   Load the supplied TOOLTIP.APP file into your Net Express IDE and
+   select the Project/Rebuild All menu choice.
+
+
+   Features
+   --------
+
+   The demonstration comprises a normal application control program
+   which calls DSGRUN, and a screenset.
+
+   TTIPDEMO.GS contains dialog on the WINDOW-CREATED event to execute the
+   SETUP-TIP dialog procedure for each object where a tip is to be displayed.
+   This procedure uses the dialog INVOKE function to execute the relevant class
+   library methods to establish a tip for each object.
+
+   Similar code could be added to a User Control program which performs the same
+   functions based on a list of controls you require tooltips for.
+
+   The dialog code is commented to identify what is happening. In summary, the
+   code detemines the GUI class library object for the supplied handle. It
+   creates a tooltip and a character array instance for the required text and
+   adds the gadget and text to the  tooltip instance. This completes the task
+   and the window objects will have the tooltip enabled until the window
+   is deleted.
+
+   See the Class library documentation for additional methods avaialable to
+   the tooltip class.
+

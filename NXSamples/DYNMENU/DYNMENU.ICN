@@ -1,0 +1,8 @@
+;
+; Dialog System Resource Side File
+;
+
+;------------------ Microsoft Windows Images -------------------------------
+
+[win-icons]
+ab-min-icon           : dsicow32.dll 0104

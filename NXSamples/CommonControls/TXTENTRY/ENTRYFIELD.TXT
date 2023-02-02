@@ -1,0 +1,121 @@
+   *********************************************************************
+
+                        Micro Focus Dialog System V3
+
+                      Text Entry Control Demonstration
+
+   *********************************************************************
+
+
+
+   Overview
+   --------
+
+   The EFDEMO screenset is provided as an example of how to use a
+   control program to add a Text Entry (Entry Field) control to your
+   Dialog System application.
+
+   The benefits of using a Programmed version of the Text Entry control, include
+   the following:
+
+       -   Full Overstrike/Insert support
+       -   Full control and validation of every keystroke
+       -   The ability to create a User defined edit field mask
+
+
+   Files required
+   --------------
+
+   The files needed to run the demonstration program are:
+
+        Name of the file     Description of the file
+        ----------------     -----------------------
+        EFDEMO.GS            The demonstration screenset
+        EFDEMO.CBL           The application program
+         - efdemo.cpb        Screenset datablock copyfile
+         - ds-cntrl.mf       Dialog System Control Block copyfile
+
+        EFDemoTxtFld.CBL     Text Field Control program
+         - efdemo.cpb        Screenset datablock copyfile
+         - strcture.cpy      Control Program interface copyfile
+         - p2cevent.cpy      Class library event code identifier copyfile
+         - keys.cpy          Class library key code identifier copyfile
+         - userctrl.cpy      Dialog System runtime/Control program interface
+                             definition
+        EFDEMO.TXT           This document.
+
+
+   Running The Demonstration Program
+   ---------------------------------
+
+   Load the supplied ENTRYFIELD.APP file into your NetExpress IDE and
+   select the Project/Rebuild All menu choice.
+
+
+   Features
+   --------
+
+   At window creation time, the Dialog System runtime encounters the object
+   defined on the window, and calls the "create" entry point in the controls
+   associated program. This program places the control on the newly created
+   window.
+
+   This demonstration illustrates the use of two Text Entry fields, that are 
+   associated to the same datablock master field as the Dialog System equivalent
+   Entry Field objects.
+
+   The controls are updated from the master field on GAINFOCUS and update the 
+   master field on LOSTFOCUS. You can see how full Insert/Overstrike support is 
+   provided by the Text Entry versions.
+
+
+   Adding a Text Entry Control to your application
+   ===============================================
+
+   This demonstration was created using the programmable Text Entry control
+   control that you can paint on your application window, by selecting
+   the Programmed controls tab of the Dialog System toolbar palette.
+
+   When the control is painted, the Control properties dialog appears, select
+   the "Add program to current project" check box and the "Generate" push button
+   to create the control program in your project.
+
+   A single program can maintain multiple Text Entry Controls. You need to
+   modify the generated code in the "TO DO" comment sections of the generated
+   program. These modifications are detailed below.
+
+   Full comments are available in the screenset and the generated control
+   program source code.
+
+   Screenset Data import
+   ---------------------
+
+   If you have not used the New GUI Application Wizard to create the Text Entry 
+   control program, you will need to import the following files contained in 
+   the DialogSystem\Source directory:
+
+       FUNCDATA.IMP    The generic communication area used by all control
+                       programs
+
+
+   Modifications required
+   ----------------------
+
+   The generated program has comments containing "TO DO" items, and you need to
+   modify the program to enable each Text Entry you require to be correctly
+   linked to your required data block master field.
+
+   These simple modifications are well documented in the source code - search
+   for "TO DO" - and are as follows:
+
+       -   On field creation, modify the properties of the created fields
+           to include Autoswipe/UPPERCASE etc settings as required.
+
+       -   On field creation, set the field length to a value appropriate to the
+           master field you wish to link it to.
+
+       -   For field GAINFOCUS and LOSTFOCUS events callback code,
+           (Setup-Field-Data section) specify the master field name and length
+           to be used when placing/retrieving the master field values in/from
+           the Text Entry.
+

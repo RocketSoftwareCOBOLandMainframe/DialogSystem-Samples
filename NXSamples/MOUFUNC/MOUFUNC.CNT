@@ -1,0 +1,26 @@
+:Base moufunc.hlp
+:Title Dialog System Help Demo
+1 Dialog System Reference
+2 Edit Menu
+3 Color=drsyst_edit_colo @moufunc.hlp>main
+1 Dialog Statements: Events
+2 Object Events
+3 MOUSE-EVENT=dreven_mouse_event @moufunc.hlp>main
+3 MOUSE-OVER=dreven_mouse_over @moufunc.hlp>main
+1 Dialog Statements: Functions
+2 Dialog System Functions
+3 HIDE-OBJECT=drfuns_hide_obje @moufunc.hlp>main
+3 INVOKE-CONTEXT-MENU=drfuns_invo_cont_menu @moufunc.hlp>main
+3 SHOW-OBJECT=drfuns_show_obje @moufunc.hlp>main
+1 Dialog System Extensions
+2 Dsonline
+3 Dsonline=drcann_dson@moufunc.hlp>main
+3 Dsonline Functions
+4 Dsonline Functions=drcann_dson_func>main
+4 Cont and Indx=drcann_dson_cont@moufunc.hlp>main
+4 Ctxt=drcann_dson_ctxt@moufunc.hlp>main
+4 Name=drcann_dson_name@moufunc.hlp>main
+4 Quit=drcann_dson_quit@moufunc.hlp>main
+2 Dsonline Flags=drcann_dson_dsof@moufunc.hlp>main
+2 Dsonline Return Codes=drcann_dson_dsor@moufunc.hlp>main
+2 Dsoline Example=drcann_dson_exam>main

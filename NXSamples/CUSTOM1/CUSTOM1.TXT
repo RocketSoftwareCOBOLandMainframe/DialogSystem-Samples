@@ -1,0 +1,76 @@
+   *********************************************************************
+
+                       Micro Focus Dialog System V3.0
+
+                       CUSTOM1 Demonstration Program
+
+   *********************************************************************
+
+
+   CUSTOM1 Demonstration Program
+   -----------------------------
+
+
+   Overview
+   --------
+
+   This CUSTOM1 example program is a modified version of the CUSTOMER
+   example program. It has been enhanced to show how multiple instances
+   of screensets may be created.
+
+
+   Files Required
+   --------------
+
+   The files needed to build and run the demonstration program are:
+
+   Name of the file     Description of the file
+   ----------------     -----------------------------------------------------
+     CUSTOM1.GS           The CUSTOM1 Dialog System screenset.
+
+     CUSTOM2.GS           The CUSTOM2 Dialog System screenset.
+
+     CUSTOM1.CBL          The CUSTOM1 COBOL program.
+      - ds-cntrl.mf       Dialog System control file.
+      - dssysinf.cpy      Dialog System system information file.
+
+     CUSTOM1.ERR          Error messages used by the demo.
+
+     CUSTOM1.TXT          This CUSTOM1 document.
+
+     CUSTOM1.APP          The Net Express project file.
+
+
+   Compiling and Running The Demonstration Program
+   -----------------------------------------------
+
+   In order to run the CUSTOM1 demonstration, you need to compile the
+   CUSTOM1.CBL demonstration program by using the Net Express Project/Rebuild All
+   menu choice.
+
+   To run the program having created the .INT file as detailed above,
+   run or animate the program CUSTOM1.INT using the Net Express Animate menu or
+   the relevant toolbar button.
+
+
+   Features
+   --------
+
+   This demonstration shows how you can create and manage multiple instances of 
+   the same screenset. It is an adapted version of the Customer Screenset, with
+   the required multiple instance functionality removed into a seperate screenset.
+
+   The CUSTOM1 screenset contains the Customer Details window and the Order
+   Entry dialog box, and the CUSTOM2 screenset contains the Change Order dialog 
+   box from the CUSTOMER screenset.
+
+
+
+   Extra Notes
+   -----------
+
+   When you compile a program from within the Net Express IDE, the
+   INT and IDY files may (depending on your project's build type) be
+   placed in a directory below your working directory. When running the
+   demonstration outside of the IDE you must make sure the project build
+   directory is on your COBDIR.

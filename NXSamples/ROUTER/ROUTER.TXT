@@ -1,0 +1,147 @@
+   *********************************************************************
+
+                      Micro Focus Dialog System V3.0
+
+                       ROUTER Demonstration Program
+
+   *********************************************************************
+
+
+   ROUTER Demonstration Program
+   ----------------------------
+
+
+   Overview
+   --------
+
+   This ROUTER example shows how to use multiple screensets with Dialog
+   System in an environment which does not have the ability to run
+   subprograms concurrently.
+
+
+   Files Required
+   --------------
+
+   The files needed to build and run the demonstration program are:
+
+   Name of the file     Description of the file
+   ----------------     -----------------------------------------------------
+     PROGRAMA.GS          Screenset for program A.
+
+     PROGRAMB.GS          Screenset for program B.
+
+     PROGRAMC.GS          Screenset for program C.
+
+     ROUTER.CBL           Main routing program.
+      - router.cpy        Interface between main program and subprograms.
+
+     PROGRAMA.CBL         Program A. This contains the menu.
+      - router.cpy        Interface between main program and subprograms.
+      - ds-cntrl.mf       Dialog System control file.
+      - dssysinf.cpy      Dialog System system information file.
+      - programa.cpb      Dialog System data block copyfile for PROGRAMA.GS.
+
+     PROGRAMB.CBL         Program B. A subprogram.
+      - router.cpy        Interface between main program and subprograms.
+      - ds-cntrl.mf       Dialog System control file.
+      - dssysinf.cpy      Dialog System system information file.
+      - programb.cpb      Dialog System data block copyfile for PROGRAMB.GS.
+
+     PROGRAMC.CBL         Program C. Another subprogram.
+      - router.cpy        Interface between main program and subprograms.
+      - ds-cntrl.mf       Dialog System control file.
+      - dssysinf.cpy      Dialog System system information file.
+      - programc.cpb      Dialog System data block copyfile for PROGRAMC.GS.
+
+     ROUTER.TXT           This ROUTER document.
+
+     ROUTER.APP           The Net Express project file supplied with the demo.
+
+
+
+   Compiling and Running The Demonstration Program
+   -----------------------------------------------
+
+   In order to run the ROUTER demonstration, you need to compile the
+   ROUTER.CBL, PROGRAMA.CBL, PROGRAMB.CBL, and PROGRAMC.CBL demonstration
+   programs.
+
+   Load the supplied Net Express project file and select Rebuild All
+   from the Project menu.
+
+   Run the demonstration by selecting Run from the Animate menu.
+
+   Once you have invoked the demo, select the options from the menu bar
+   to show the different screensets.
+
+
+   Features
+   --------
+
+   The problem here is that the user can click in any window at any time.
+   This means that if multiple programs with multiple screensets are in use
+   then control has to be passed to the correct program and the correct
+   screenset has to be in use by DSRUN.
+
+
+   Passing control to the correct program
+   --------------------------------------
+
+   DSRUN is capable of detecting that an event has occurred in a screenset
+   other than the one that is currently loaded. This is done via the
+   OTHER-SCREENSET event which in this example is in the global dialog table
+   for each screenset.
+
+   When such an event is detected the REPEAT-EVENT function is used. This
+   tells DSRUN to repeat the last event the next time it goes for input.
+   This will in fact be when the next screenset is loaded and control is in
+   the next program.
+
+   After the REPEAT-EVENT the screenset returns to the program. The program
+   has called DSRUN using the third parameter. This contains system
+   information concerning the last event. Part of this information is the
+   screenset identifier of the screenset in which the last event occurred.
+   The program uses this information as the means of passing control via the
+   ROUTER to the program that owns the event.
+
+
+   Using the new correct screenset
+   -------------------------------
+
+   DSRUN has the concept of pushing and popping screensets. It holds the
+   screensets on a stack. A feature is available so a screenset on the stack
+   can be used even if it is not on top of the stack. This is done using the
+   DS-USE-SET value in DS-CONTROL. The current screenset is placed on top of
+   the stack and the screenset set to be used is loaded into DSRUN.
+
+
+   Program structure
+   -----------------
+
+   The programs are written so when they are first called they use the
+   DS-PUSH-SET control value to initialize them as a new screenset. Note
+   that for the very first screenset DSRUN treats this as a DS-NEW-SET call.
+   If the program is invoked at any other time it is assumed that the
+   programs screenset is to be brought into use and so the DS-USE-SET
+   control value is supplied.
+
+   Apart from this the program contains an evaluate statement which is
+   driven by flags from the screenset.
+
+   Note that the ROUTER makes use of two data items to provide some control
+   in the canceling of subprograms when they are closed.
+
+
+   Extra Notes
+   -----------
+
+   In order to achieve the look and feel of a concurrent application it is
+   important that each subprogram does not perform any long tasks that are
+   not interruptable. If this happens then the impression will be that the
+   user interface is not responding.
+
+   When you compile a program from within the Net Express IDE, the
+   INT and IDY files may (depending on your project's build type) be
+   placed in a directory below your working directory. When running the
+   demonstration outside of the IDE you must make sure the project build
+   directory is on your COBDIR.

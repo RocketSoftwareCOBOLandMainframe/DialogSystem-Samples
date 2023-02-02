@@ -1,0 +1,53 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 VOC-DATA-BLOCK-VERSION-NO          PIC 9(8) COMP-5
+                                             VALUE 3.
+
+       01 VOC-VERSION-NO                     PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 VOC-SET-BUILD-NO                   PIC 9(4) COMP-5
+                                             VALUE 52.
+
+       01 VOC-DATA-BLOCK.
+          03 VOC-C-CODE                      PIC X(5).
+          03 VOC-C-NAME                      PIC X(15).
+          03 VOC-C-ADDR1                     PIC X(15).
+          03 VOC-C-ADDR2                     PIC X(15).
+          03 VOC-C-ADDR3                     PIC X(15).
+          03 VOC-C-ADDR4                     PIC X(15).
+          03 VOC-C-LIMIT                     PIC 9(4).
+          03 VOC-C-AREA                      PIC X.
+          03 VOC-GROUP-001.
+             04 VOC-GROUP-001-ITEM           OCCURS 10.
+                05 VOC-ORD-NO                PIC 9(6).
+                05 VOC-ORD-DATE              PIC 9(6).
+                05 VOC-ORD-VAL               PIC S9(4)V9(2).
+                05 VOC-PAY-VAL               PIC S9(4)V9(2).
+                05 VOC-ORD-BAL               PIC S9(4)V9(2).
+          03 VOC-C-BAL                       PIC S9(5)V9(2).
+          03 VOC-GROUP-002.
+             05 VOC-DEL-FLG                  PIC 9.
+                88 VOC-DEL-FLG-TRUE          VALUE 1.
+             05 VOC-LOAD-FLG                 PIC 9.
+                88 VOC-LOAD-FLG-TRUE         VALUE 1.
+             05 VOC-SAVE-FLG                 PIC 9.
+                88 VOC-SAVE-FLG-TRUE         VALUE 1.
+             05 VOC-CLR-FLG                  PIC 9.
+                88 VOC-CLR-FLG-TRUE          VALUE 1.
+             05 VOC-EXIT-FLG                 PIC 9.
+                88 VOC-EXIT-FLG-TRUE         VALUE 1.
+          03 VOC-ERR-MSG                     PIC X(80).
+          03 VOC-C-ORD-NO                    PIC 9(6).
+          03 VOC-C-ORD-DT                    PIC 9(6).
+          03 VOC-C-ORD-VL                    PIC S9(4)V9(2).
+          03 VOC-C-PAY-VL                    PIC S9(4)V9(2).
+          03 VOC-DOLLAR-REGISTER             PIC x(4) COMP-X.
+          03 VOC-DOLLAR-EVENT-DATA           PIC x(4) COMP-X.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************

@@ -1,0 +1,54 @@
+   *********************************************************************
+
+                        Micro Focus Dialog System V3.0
+
+                         DSMDI Demonstration program
+
+   *********************************************************************
+
+
+   DSMDI Demonstration Program (Windows only)
+   ------------------------------------------
+
+
+   Overview
+   --------
+
+   This DSMDI example shows how you can create a Multiple Document Interface (MDI)
+   frame window using the Dialog System extension DSMDI.  All child windows of the
+   MDI frame will be MDI children, and may be used for Tile/Cascade/Arrange Icons 
+   functionality.
+
+   Files Required
+   --------------
+
+   There is no program supplied with this demonstration.
+
+
+   Name of the file     Description of the file
+   ----------------     -----------------------------------------------------
+     DSMDI.GS           The Dialog System screenset.
+     DSMDI.GNT          The Dialog System extension module
+     DSMDI.TXT          This DSMDI document
+
+
+   Running The Demonstration Program
+   ---------------------------------
+
+   Run the screenset by loading it into the definition software, and
+   selecting the File, Run option from the menu bar.
+
+
+   Features
+   --------
+   This screenset shows how its is possible to use the MDI window interface with 
+   Dialog System screensets. It also illustrates the child window arrangement 
+   functions and the ability to restrict the area of the MDI Frame window. 
+
+   This enables window sections to be excluded from any of the arrangement functions. 
+   This would be required for instance if your window contained a toolbar area, which 
+   was not to be overlaid by the arrangement of the MDI Children.
+
+   For full details on how these functions are implemented, please refer to the 
+   screenset dialog, and the comments contained.
+

@@ -1,0 +1,52 @@
+   *********************************************************************
+
+                      Micro Focus Dialog System V3.0
+
+                      MOUFUNC Demonstration Program
+
+   *********************************************************************
+
+
+   MOUFUNC Demonstration Program
+   -----------------------------
+
+
+   Overview
+   --------
+
+   This MOUFUNC example shows how to use mouse activated features such as
+   MOUSE-OVER and context menus. It also demonstrates hiding and showing
+   objects.
+
+
+   Files Required
+   --------------
+
+   There is no program supplied with this demonstration. The demonstration
+   can be run by invoking the definition software, or by using DSRUNNER.
+
+   The files needed to run the demonstration program are:
+
+   Name of the file     Description of the file
+   ----------------     -----------------------------------------------------
+     MOUFUNC.GS           The MOUFUNC Dialog System screenset file.
+
+     MOUFUNC.ICN          The sidefile required by the demo.
+
+     DSONLINE.GNT         The DSONLINE Dialog System Extension module.
+
+     DSICOW32.DLL         Bitmaps and icons used by the demo.
+     DSBMPW32.DLL
+
+     DSWIN30.HLP          Dialog System On-Line Reference for Windows.
+
+     MOUFUNC.TXT          This MOUFUNC document.
+
+     MOUFUNC.APP          The Net Express project file supplied with the demo.
+
+
+   Running the Demonstration Program
+   ---------------------------------
+
+   Load the supplied Net Express project file and run the demonstration
+   by selecting Run from the Animate menu.

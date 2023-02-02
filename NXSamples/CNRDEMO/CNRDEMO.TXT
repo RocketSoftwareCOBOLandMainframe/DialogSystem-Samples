@@ -1,0 +1,53 @@
+   *********************************************************************
+
+                       Micro Focus Dialog System V3.0
+
+                       CNRDEMO Demonstration Program
+
+   *********************************************************************
+
+
+   CNRDEMO Demonstration Program
+   -----------------------------
+
+
+   Overview
+   --------
+
+   This CNRDEMO demonstration shows how you can use the Container Dialog
+   System Extension.
+
+
+   Files Required
+   --------------
+
+   There is no program supplied with this demonstration.
+
+
+   The files supplied with the demonstration program are:
+
+   Name of the file     Description of the file
+   ----------------     -----------------------------------------------------
+     CNRDEMO.GS           The CNRDEMO Dialog System screenset.
+
+     CNRDEMO.ICN          The icon sidefile required by the demo.
+
+     CNRDEMO.DAT          Data file used to populate the container.
+     CNRDEMO.PRO          The Net Express Data File Editor CNRDEMO.DAT
+                          data file Profile.
+
+     DSSAMW32.DLL         Bitmaps and icons used by the demo.
+     DSICOW32.DLL
+
+     DSCNR.GNT            The DSCNR Dialog System Extension module.
+
+     CNRDEMO.TXT          This CNRDEMO document.
+     CNRDEMO.APP          The CNRDEMO Net Express project file.
+
+
+   Running the Demonstration Program
+   ---------------------------------
+
+   The demonstration can be run by invoking the definition software, by using
+   DSRUNNER, or by selecting the Net Express Animate/Run menu choice.
+

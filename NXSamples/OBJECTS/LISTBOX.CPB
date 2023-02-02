@@ -1,0 +1,48 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 LISTBOX-DATA-BLOCK-VERSION-NO      PIC 9(8) COMP-5
+                                             VALUE 8.
+
+       01 LISTBOX-VERSION-NO                 PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 LISTBOX-SET-BUILD-NO               PIC 9(4) COMP-5
+                                             VALUE 4.
+
+       01 LISTBOX-DATA-BLOCK.
+          03 LISTBOX-GROUP.
+             04 LISTBOX-GROUP-ITEM           OCCURS 12.
+                05 LISTBOX-GROUP-ITEM        PIC X(3).
+          03 LISTBOX-SELECTED-GROUP.
+             04 LISTBOX-SELECTED-GROUP-ITEM  OCCURS 12.
+                05 LISTBOX-SELECTED-ITEM     PIC X(3).
+          03 LISTBOX-SINGLE-ITEM             PIC X(3).
+          03 LISTBOX-INDX                    PIC 9(5).
+          03 LISTBOX-NUM-SELECTED            PIC 9(5).
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 LISTBOX-FIELD-NUMBERS.
+          03 LISTBOX-FLD-NO-GROUP-ITEM       PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 LISTBOX-FLD-NO-SELECTED-ITEM    PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 LISTBOX-FLD-NO-SINGLE-ITEM      PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 LISTBOX-FLD-NO-INDX             PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 LISTBOX-FLD-NO-NUM-SELECTED     PIC 9(4) COMP-5 VALUE
+                                               7.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

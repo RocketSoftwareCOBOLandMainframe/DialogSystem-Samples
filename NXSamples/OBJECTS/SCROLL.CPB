@@ -1,0 +1,54 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 SCROLL-DATA-BLOCK-VERSION-NO       PIC 9(8) COMP-5
+                                             VALUE 6.
+
+       01 SCROLL-VERSION-NO                  PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 SCROLL-SET-BUILD-NO                PIC 9(4) COMP-5
+                                             VALUE 10.
+
+       01 SCROLL-DATA-BLOCK.
+          03 SCROLL-COUNTER                  PIC 9(3).
+          03 SCROLL-NEW-SLIDER-POSITION      PIC 9(3).
+          03 SCROLL-NEW-MIN-RANGE            PIC 9(3).
+          03 SCROLL-NEW-MAX-RANGE            PIC 9(3).
+          03 SCROLL-NEW-SLIDER-SIZE          PIC 9(3).
+          03 SCROLL-CURR-MIN-RANGE           PIC 9(3).
+          03 SCROLL-CURR-MAX-RANGE           PIC 9(3).
+          03 SCROLL-CURR-SLIDER-SIZE         PIC 9(3).
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 SCROLL-FIELD-NUMBERS.
+          03 SCROLL-FLD-NO-COUNTER           PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 SCROLL-FLD-NO-NEW-SLIDER-POSIT  PIC 9(4) COMP-5 VALUE
+                                               2.
+      * Field NEW-SLIDER-POSITION has been truncated
+          03 SCROLL-FLD-NO-NEW-MIN-RANGE     PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 SCROLL-FLD-NO-NEW-MAX-RANGE     PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 SCROLL-FLD-NO-NEW-SLIDER-SIZE   PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 SCROLL-FLD-NO-CURR-MIN-RANGE    PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 SCROLL-FLD-NO-CURR-MAX-RANGE    PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 SCROLL-FLD-NO-CURR-SLIDER-SIZE  PIC 9(4) COMP-5 VALUE
+                                               8.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

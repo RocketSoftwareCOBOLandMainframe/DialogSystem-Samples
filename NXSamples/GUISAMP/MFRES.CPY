@@ -1,0 +1,62 @@
+*****************************************
+******** Micro Focus Copy File.  ********
+******** Version 4.00.017 ***************
+*****************************************
+        copy mfrcwin.cpy.
+*****************************************
+        78 IDB-SPLASH-SCREEN                                value 1314.
+        78 ID-VISLOGO                                       value 1313.
+        78 IDICON-GUISAMP                                   value 1309.
+        78 ID-MESSAGE-BOX                                   value 161.
+        78 SIMPLE-COMBO-BOX                                 value 1305.
+        78 DROPLIST-COMBO-BOX                               value 1303.
+        78 DROP-COMBO-BOX                                   value 1302.
+        78 COMBO-BOX-SCREEN                                 value 1300.
+        78 EXTENDED-LIST-BOX                                value 1103.
+        78 MULTIPLE-LIST-BOX                                value 1102.
+        78 SINGLE-LIST-BOX                                  value 1101.
+        78 LIST-BOX-SCREEN                                  value 1100.
+        78 RADIO-GROUP                                      value 801.
+        78 GROUP-RADIO-SCREEN                               value 800.
+        78 RADIO-MONTHLY                                    value 710.
+        78 RADIO-WEEKLY                                     value 709.
+        78 RADIO-DAILY                                      value 708.
+        78 RADIO-HOURLY                                     value 707.
+        78 PB-ACCEPT-FIELDS                                 value 205.
+        78 EF-EDIT-FIELD                                    value 302.
+        78 TF-TEXT-FIELD                                    value 301.
+        78 EF-EDIT-FIELD2                                   value 207.
+        78 ID-MENUBAR                                       value 110.
+        78 UD-UPDOWN-CONTROL2                               value 704.
+        78 EF-EDIT-FIELD3                                   value 701.
+        78 LB-LISTBOX                                       value 703.
+        78 UD-UPDOWN-CONTROL1                               value 702.
+        78 PB-CHANGE-TEXT-FIELD                             value 201.
+        78 PB-PREDISPLAY-EDIT-FIELD                         value 203.
+        78 EF-EDIT-FIELD1                                   value 204.
+        78 PB-DISABLE-EDIT-FIELD                            value 303.
+        78 PB-ENABLE-EDIT-FIELD                             value 304.
+        78 CHK-CHECKBOX1                                    value 502.
+        78 CHK-CHECKBOX2                                    value 503.
+        78 ID-GROUP-BOX-WITH-RADIOS                         value 150.
+        78 ID-COMBO-BOX                                     value 151.
+        78 ID-LIST-BOX                                      value 152.
+        78 ID-TREE-VIEW                                     value 153.
+        78 ID-CHECK-BOX                                     value 154.
+        78 ID-TEXT-EDIT-FIELDS1                             value 155.
+        78 ID-TEXT-EDIT-FIELDS2                             value 156.
+        78 ID-SCROLLBARS                                    value 157.
+        78 ID-UP-DOWN-CONTROLS                              value 158.
+        78 ID-ENABLE-MENU                                   value 159.
+        78 ID-DISABLE-MENU                                  value 160.
+        78 DLG-LOSE-AND-GAIN-FOCUS                          value 300.
+        78 DLG-UP-DOWN-CONTROLS                             value 700.
+        78 DLG-TEXT-EDIT-FIELD-DEMO                         value 200.
+        78 DLG-CHECKBOX-DEMO                                value 500.
+        78 DLG-TREEVIEW-DEMO                                value 600.
+        78 ID-EXIT-SYSTEM                                   value 162.
+        78 ID-LISTS-SUBMENU                                 value 163.
+        78 ID-MENUS-SUBMENU                                 value 164.
+        78 ID-ABOUT                                         value 165.
+        78 DLG-ABOUT                                        value 900.
+        78 IDICON-CHILDWIN                                  value 1310.

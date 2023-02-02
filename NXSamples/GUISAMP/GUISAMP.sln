@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{535C04D7-A2A5-47C7-83E0-B340A995CD1F}") = "TRIGGER", "TRIGGER.cblproj", "{EA05006A-6B86-4314-9FAD-47DA6417830B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CB4C2959-DBC6-48B1-94AF-1EE442158DE2} = {CB4C2959-DBC6-48B1-94AF-1EE442158DE2}
+	EndProjectSection
+EndProject
+Project("{535C04D7-A2A5-47C7-83E0-B340A995CD1F}") = "GUISAMP", "GUISAMP.cblproj", "{CB4C2959-DBC6-48B1-94AF-1EE442158DE2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA05006A-6B86-4314-9FAD-47DA6417830B}.Debug|x86.ActiveCfg = Debug|x86
+		{EA05006A-6B86-4314-9FAD-47DA6417830B}.Debug|x86.Build.0 = Debug|x86
+		{EA05006A-6B86-4314-9FAD-47DA6417830B}.Release|x86.ActiveCfg = Release|x86
+		{EA05006A-6B86-4314-9FAD-47DA6417830B}.Release|x86.Build.0 = Release|x86
+		{CB4C2959-DBC6-48B1-94AF-1EE442158DE2}.Debug|x86.ActiveCfg = Debug|x86
+		{CB4C2959-DBC6-48B1-94AF-1EE442158DE2}.Debug|x86.Build.0 = Debug|x86
+		{CB4C2959-DBC6-48B1-94AF-1EE442158DE2}.Release|x86.ActiveCfg = Release|x86
+		{CB4C2959-DBC6-48B1-94AF-1EE442158DE2}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

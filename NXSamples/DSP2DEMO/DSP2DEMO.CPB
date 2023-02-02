@@ -1,0 +1,73 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 DP-DATA-BLOCK-VERSION-NO           PIC 9(8) COMP-5
+                                             VALUE 1.
+
+       01 DP-VERSION-NO                      PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 DP-SET-BUILD-NO                    PIC 9(4) COMP-5
+                                             VALUE 4.
+
+       01 DP-DATA-BLOCK.
+      * This field is used to specify the
+      * reason for returning to the calling
+      * program
+          03 DP-RETC-REASON                  PIC X(8).
+      * This group is used specify parameters
+      * for the retc-reason
+          03 DP-RETC-OBJECT-COUNT            PIC x(4) COMP-X.
+          03 DP-RETC-OBJECT-LIST.
+             04 DP-RETC-OBJECT-LIST-ITEM     OCCURS 10.
+                05 DP-RETC-OBJECT            PIC x(4) COMP-X.
+                05 DP-RETC-OBJECT-PARAMETER  PIC x(4) COMP-X.
+      * This field used for colorize procedure
+          03 DP-CLR-SET                      PIC x(4) COMP-X.
+          03 DP-DISPLAY-TEXT                 PIC X(32).
+      * These fields used for clipboard
+          03 DP-CLIP-ITEM-GROUP.
+             05 DP-CLIP-ITEM-1               PIC 9(4).
+             05 DP-CLIP-ITEM-2               PIC 9(4).
+             05 DP-CLIP-ITEM-3               PIC 9(4).
+             05 DP-CLIP-ITEM-4               PIC 9(4).
+          03 DP-ENTER-TRAP                   PIC x(4) COMP-X.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 DP-FIELD-NUMBERS.
+          03 DP-FLD-NO-RETC-REASON           PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 DP-FLD-NO-RETC-OBJECT-COUNT     PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 DP-FLD-NO-RETC-OBJECT           PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 DP-FLD-NO-RETC-OBJECT-PARAMETE  PIC 9(4) COMP-5 VALUE
+                                               5.
+      * Field RETC-OBJECT-PARAMETER has been truncated
+          03 DP-FLD-NO-CLR-SET               PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 DP-FLD-NO-DISPLAY-TEXT          PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 DP-FLD-NO-CLIP-ITEM-1           PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 DP-FLD-NO-CLIP-ITEM-2           PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 DP-FLD-NO-CLIP-ITEM-3           PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 DP-FLD-NO-CLIP-ITEM-4           PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 DP-FLD-NO-ENTER-TRAP            PIC 9(4) COMP-5 VALUE
+                                               13.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

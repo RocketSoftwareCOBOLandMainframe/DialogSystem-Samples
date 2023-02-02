@@ -1,0 +1,52 @@
+   *********************************************************************
+
+                      Micro Focus Dialog System V3.0
+
+                      VIEWDEMO Demonstration Program
+
+   *********************************************************************
+
+
+   VIEWDEMO Demonstration Program
+   ------------------------------
+
+
+   Overview
+   --------
+
+   This VIEWDEMO demonstration shows the capabilities of the DSBROWSE
+   Dialog System Extension. The DSBROWSE extension provides the ability
+   to review plain text files from within Dialog System applications,
+   without the need for the user to write any COBOL code. The DSBROWSE
+   extension is accessed by means of the CALLOUT function in Dialog System.
+
+   The demonstration does not require any COBOL code, however a predefined
+   data block is required. This is supplied with the definition software.
+
+
+   Files Required
+   --------------
+
+   There is no program supplied with this demonstration. The demonstration
+   can be run by invoking the definition software, or by using DSRUNNER.
+
+   The files needed to run the demonstration program are:
+
+   Name of the file     Description of the file
+   ----------------     -----------------------------------------------------
+     VIEWDEMO.GS          The VIEWDEMO screenset.
+
+     DSBROWSE.GNT         The DSBROWSE Dialog System Extension module.
+
+     VIEWDEMO.DOC         This VIEWDEMO document
+
+     VIEWDEMO.APP         The Net Express project file supplied with the demo.
+
+
+   Running the Demonstration Program
+   ---------------------------------
+
+   Load the supplied Net Express project file and select Rebuild All
+   from the Project menu.
+
+   Run the demonstration by selecting Run from the Animate menu.

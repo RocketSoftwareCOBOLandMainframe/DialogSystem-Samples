@@ -1,0 +1,44 @@
+   *********************************************************************
+
+                      Micro Focus Dialog System V3.0
+
+                      MOVEDEMO Demonstration Program
+
+   *********************************************************************
+
+
+   MOVEDEMO Demonstration Program
+   ------------------------------
+
+
+   Overview
+   --------
+
+   This MOVEDEMO demonstration shows how you can position and size windows
+   within your Dialog System application.
+
+
+   Files Required
+   --------------
+
+   There is no program supplied with this demonstration. The demonstration
+   can be run by invoking the definition software, or by using DSRUNNER.
+
+   The files needed to run the demonstration program are:
+
+   Name of the file     Description of the file
+   ----------------     -----------------------------------------------------
+     MOVEDEMO.GS          The MOVEDEMO Dialog System screenset.
+
+     DSMOVSZ.GNT          The DSMOVSZ Dialog System Extension module.
+
+     MOVEDEMO.TXT         This MOVEDEMO document
+
+     MOVEDEMO.APP         The Net Express project file supplied with the demo.
+
+
+   Running the Demonstration Program
+   ---------------------------------
+
+   Load the supplied Net Express project file and run the demonstration
+   by selecting Run from the Animate menu.

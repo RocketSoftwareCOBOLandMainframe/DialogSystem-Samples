@@ -1,0 +1,51 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 DATA-BLOCK-VERSION-NO              PIC 9(8) COMP-5
+                                             VALUE 2.
+
+       01 VERSION-NO                         PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 SET-BUILD-NO                       PIC 9(4) COMP-5
+                                             VALUE 16.
+
+       01 DATA-BLOCK.
+          03 FUNCTION-DATA.
+             05 WINDOW-HANDLE                PIC x(4) COMP-5.
+             05 OBJECT-REFERENCE OBJECT REFERENCE.
+             05 CALL-FUNCTION                PIC X(30).
+             05 NUMERIC-VALUE                PIC x(4) COMP-5.
+             05 NUMERIC-VALUE2               PIC x(4) COMP-5.
+             05 SIZE-WIDTH                   PIC x(4) COMP-5.
+             05 SIZE-HEIGHT                  PIC x(4) COMP-5.
+             05 POSITION-X                   PIC x(4) COMP-5.
+             05 POSITION-Y                   PIC x(4) COMP-5.
+             05 IO-TEXT-BUFFER               PIC X(256).
+             05 IO-TEXT-BUFFER2              PIC X(256).
+          03 MYSTATUSBAR OBJECT REFERENCE.
+          03 CURRENT-WINDOW-SBAR OBJECT REFERENCE.
+          03 CONFIG-FLAG                     PIC x(4) COMP-5.
+          03 CONFIG-VALUE                    PIC x(4) COMP-5.
+          03 MYTOOLBAR OBJECT REFERENCE.
+          03 TBAR-PARMS.
+             05 MENU-INDEX                   PIC 9(2).
+             05 CALLBACK-ENTRY-NAME          PIC X(32).
+             05 ACCEL-FLAGS                  PIC 9(3).
+             05 ACCEL-KEY                    PIC 9(3).
+             05 MENU-TEXT                    PIC X(256).
+             05 MENU-HINT-TEXT               PIC X(256).
+             05 RESOURCE-FILE                PIC X(256).
+             05 RESOURCE-ID                  PIC 9(5).
+             05 TOOL-TIP-TEXT                PIC X(256).
+             05 INSERT-BUTTON-BEFORE         PIC 9(2).
+             05 MSG-BOX-TEXT                 PIC X(256).
+          03 CURR-FUNCTION                   PIC x COMP-5.
+          03 PREV-FUNCTION                   PIC x COMP-5.
+          03 HELP-ON                         PIC x COMP-5.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************

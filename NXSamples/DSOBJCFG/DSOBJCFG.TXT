@@ -1,0 +1,117 @@
+   *********************************************************************
+
+                        Micro Focus Dialog System V3.0
+
+                  Object Configuration Demonstration program
+
+   *********************************************************************
+
+
+   DSOBJCFG Demonstration Program 
+   ------------------------------
+
+
+   Overview
+   --------
+
+   This example shows how you can alter the properties of Dialog System
+   objects at runtime using a simple CALLOUT to the supplied Dialog System 
+   extension program DSOBJCFG.
+
+   The demonstration illustrates how this may be achieved when the object is
+   either created and shown to the user, or before the objects creation.
+
+   Files Required
+   --------------
+
+   There is no program supplied with this demonstration.
+
+   Name of the file     Description of the file
+   ----------------     -----------------------------------------------------
+     DSOBJCFG.GS        The Dialog System screenset.
+     STYLDATA.GNT	This program will create a data group of possible
+			STYLE values appropriate to the supplied control type.
+			(See details below.)
+
+     DSOBJCFG.TXT   	This document
+
+
+   Running The Demonstration Program
+   ---------------------------------
+
+
+   Run the screenset by selecting the Net Express Animate, Run menu choice or by
+   loading it into the definition software, and selecting the File, Run
+   option from the menu bar.
+
+
+   Features
+   --------
+
+   This demonstration screenset shows how it is possible to dynamically alter the 
+   appearance of controls in your Dialog System screenset using one simple CALLOUT.
+
+   When running the demonstration, Select an Item from each of the three selection
+   boxes, and press the Change push button. A new window is shown and requested
+   changes will be applied to the control type you selected. 
+
+   Note that when selecting SIZE and POSN change items,  the DSOBJCFG program input 
+   parameter values are created by coded Dialog. When using the STYLE and TYPE change 
+   you are required to input 1 or 2 parameters as required - as detailed in the 
+   reference documentation.
+
+   e.g. Changing a STYLE - Select the required Object, STYL, and the appropriate Change 
+   Mode from the three selection boxes. Select the required STYLE from the displayed 
+   list of Styles that may be changed, select On/Off (1/0) and press the Change push button.
+
+   e.g. Changing a TYPE - Select the required Object, TYPE, and the appropriate Change 
+   Mode from the three selection boxes. Enter the required TYPE value that may be changed 
+   as documented in the reference material, select any second parameter input value 
+   (if needed) and press the Change push button.
+
+   Note that in this demonstration if you select any option other than the 
+   "Screenset DATA only" from the Change mode selection box, the Window is created 
+   before any changes are applied. Changing the "Screenset DATA only" option will
+   modify the screenset data before creation of the window.
+ 
+
+   These features are enabled by a CALLOUT to the runtime object configuration module 
+   DSOBJCFG, please see screenset dialog, and the DS Reference maual for full details
+   on implementation of this feature.
+
+   Limitations
+   -----------
+
+   Not all properties are configurable after the controls creation. Please refer to the 
+   supplied reference and the PanelsV2 on-line reference for information on control 
+   attributes that may be changed after the controls creation.
+
+
+
+
+   The STYLDATA Program
+   --------------------
+
+   This program is supplied as a mechanism of obtaining a data group containing STYLE 
+   details that may be changed via the CALLOUT to DSOBJCFG. You supply this program
+   with an Object type and a data group as follows:
+
+	STYLE-OBJECT-TYPE                C5     1.0           
+	STYLE-GROUP                      22              
+	  STYLE-NAME                     X     20.0           
+	  STYLE-VALUE                    C5     4.0           
+   
+   On Entry:
+
+   STYLE-OBJECT-TYPE	Set this to one of the Object types as identified in
+			the DSOBJCFG documentation
+
+   On Exit:			
+			The data group has been established with the available
+			STYLE details which may be changed for this object
+
+   This program is supplied for use with the DSOBJCFG demonstration screenset. It provides 
+   information used by the demonstration, but may be used freely with your applications. In 
+   practice however, once you are aware of the values to be changed you may prefer to set the
+   required values yourself in your calling COBOL program, so are unlikely to need this program 
+   in your application

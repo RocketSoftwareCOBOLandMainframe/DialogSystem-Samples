@@ -1,0 +1,7 @@
+#define   drcann_dson   158
+#define   drfuns_hide_obje   374
+#define   drfuns_invo_cont_menu   380
+#define   dreven_mouse_event   387
+#define   dreven_mouse_over   388
+#define   drfuns_show_obje   430
+#define   drsyst_edit_colo   552

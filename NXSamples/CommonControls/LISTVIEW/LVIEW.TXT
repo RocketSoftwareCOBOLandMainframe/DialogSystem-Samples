@@ -1,0 +1,161 @@
+   *********************************************************************
+
+                        Micro Focus Dialog System V3
+
+                         List Control Demonstration
+
+   *********************************************************************
+
+
+
+   Overview
+   --------
+
+   The LVDEMO screenset is provided as an example of how to use a
+   control program to add a List control (List View Control) to your
+   Dialog System application.
+
+   The benefits of using a Programmed version of the list control, rather than
+   making use of the DSCNR Dialog System Extension is that it gives you full
+   programmatic control over all aspects of the control including API access if
+   needed.
+
+
+   Files required
+   --------------
+
+   The files needed to run the demonstration program are:
+
+        Name of the file     Description of the file
+        ----------------     -----------------------
+        LVDEMO.GS            The demonstration screenset
+        LVDEMO.CBL           The application program
+         - lvdemo.cpb        Screenset datablock copyfile
+         - ds-cntrl.mf       Dialog System Control Block copyfile
+
+        LVIEWCTL.CBL         List Control program
+         - lvdemo.cpb        Screenset datablock copyfile
+         - strcture.cpy      Control Program interface copyfile
+         - p2cevent.cpy      Class library event code identifier copyfile
+         - keys.cpy          Class library key code identifier copyfile
+         - callconv.cpy      Calling conventions copy file used in API calls
+         - userctrl.cpy      Dialog System runtime/Control program interface
+                             definition
+
+        LVICONS.DLL          Resource DLL containing icon images used
+         - lvicons.res       Compiled version of the resource file
+         - lvicons.rc        The Icon resource file
+         - mfres.h           The resource file ID header file
+         - *.ico             The Icon images used
+
+        INVENTORY.DAT        The data file used for the demonstration
+
+        LVIEW.APP            The Net Express project file
+
+        LVIEW.TXT            This document.
+
+
+   Running The Demonstration Program
+   ---------------------------------
+
+   Load the supplied LVIEW.APP file into your Net Express IDE and
+   select the Project/Rebuild All menu choice.
+
+
+   Features
+   --------
+
+   At window creation time, the Dialog System runtime encounters the object
+   defined on the window, and calls the "create" entry point in the controls
+   associated program. This program places the control on the newly created
+   window.
+
+   The demonstration populates a List Control from a sequential data file, and
+   includes full details on configuring the control and manipulating it at
+   runtime.
+
+   The manipulation functions cover most of the functionality provided by the
+   control, in a context that Dialog System programmers will be familiar with
+   based on use of the List Box object.
+
+   Run the built application. The main window appears and the list control is
+   populated with data. Select the "Test Functions" push button.
+
+   A window appears which contains  push buttons which execute functions on the
+   control. Where a function has input/output parameters these are input using
+   the entry fields on this window.
+
+   These manipulation functions are well documented in the dialog and COBOL
+   code and additional documentation is available for the List View class
+   via the Net Express help.
+
+
+   Adding a List Control to your application
+   =========================================
+
+   This demonstration was created using the programmable List View
+   control that you can paint on your application window, by selecting
+   the Programmed controls tab of the Dialog System toolbar palette.
+
+   When the control is painted, the Control properties dialog appears, select
+   the "Add program to current project" check box and the "Generate" push button
+   to create the control program in your project.
+
+   A single program can maintain multiple List View Controls, although in
+   practice you will probably choose to create seperate programs for each.
+
+   In addition to placing calls in your application to establish the Column Headers
+   and to populate the data, as illustrated in this demonstration, you also need
+   to modify the generated code in the "TO DO" comment sections of the generated 
+   program. These modifications are detailed below.
+
+   Screenset Data import
+   ---------------------
+
+   If you have not used the New GUI Application Wizard to create the control
+   program, you will need to import the following files contained in the
+   DialogSystem\Source directory:
+
+       FUNCDATA.IMP    The generic communication area used by all control
+                       programs
+
+       LVIEWDATA.IMP   The List View data block master fields used by the
+                       control program
+
+
+   Modifications required
+   ----------------------
+
+   The generated program has comments containing "TO DO" items, and you need to
+   modify the program to enable each List Control you use, to be correctly
+   configured to meet your requirements.
+
+   These simple modifications are well documented in the source code - search
+   for "TO DO" - and are as follows:
+
+       -   Configure the Datablock Master groups and the associated
+           Insert code sections to contain the number and format of the
+           columns you require.
+
+       -   On creation of the control, modify the properties of the List to
+           include Gridlines/FullRowSelect etc as required
+
+       -   If required you can enable the use of a Check box to be added to the
+           1st column of each item in the list.
+
+       -   If required you can enable the use of an Icon to be added to the 1st
+           column of each item in the list. You then need to set up an icon
+           resource DLL and provide an icon ID for each inserted item
+
+       -   Code the criteria used for setting a column to right justified if
+           required.
+
+       -   For each event the control generates, tailor your screenset to detect
+           the posted USER-EVENT if required.
+
+       -   If required you can enable scrollbar tracking. This enables scroll
+           events to be sent to the program, allowing 'paging' of data in and
+           out of the control to cater for large volumes. You should experiment,
+           and in practice this may not be required.
+
+

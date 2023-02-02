@@ -1,0 +1,94 @@
+   *********************************************************************
+
+                       Micro Focus Dialog System V3.0
+
+                        DSOLE Demonstration Program
+
+   *********************************************************************
+
+
+   DSOLE Dialog System Extension Demonstration Program
+   ---------------------------------------------------
+
+
+   Overview
+   --------
+
+   The DSOLE Dialog System Extension provides extensions to the OLE 2.0
+   functionality provided directly within Dialog System. It includes
+   functionality to load and save objects, edit styles and allow
+   objects to be activated in-place.
+
+   See the DSOLE topic in your help for full information.
+
+   Files Required
+   --------------
+
+   There is no program supplied with this demonstration.
+
+   The files needed to run the demonstration program are:
+
+   Name of the file     Description of the file
+   ----------------     -----------------------------------------------------
+     DSOLE.GS             The DSOLE Dialog System screenset
+
+     DSOLE.GNT            The DSOLE Dialog System Extension module.
+
+     DSOLE.TXT            The Net Express DSOLE project.
+     DSOLE.TXT            This DSOLE document.
+
+
+   Running the Demonstration Program
+   ---------------------------------
+
+   Run the screenset by selecting the Animate, Run menu choice on the Net Express
+   IDE or by loading it into the definition software, and selecting the File,
+   Run option from the menu bar.
+
+
+   Demonstration Features
+   ----------------------
+
+   This demonstration screenset illustrates the use of the DSOLE Dialog System 
+   Extension(DSX), together with the OLE control and OLE-UPDATED events to maintain 
+   and use OLE objects in your Dialog System application.
+
+   The DSOLE DSX is used for maintenance of the OLE object and includes functionality
+   to maintain Embedded and Linked objects, via modification of the OLE site and 
+   container window. 
+
+   Access to certain OLE common dialogs (Insert object/Edit Links etc) is also provided 
+   by this DSX.
+
+
+   Using the demonstration
+   -----------------------
+
+   The DSOLE screenset has a Bitmap embedded as an OLE object. You may substitute this
+   object for any OLE2.0 compliant object such as a Microsoft Excel worksheet or Word
+   document. Select the Delete object push button, followed by the Insert Object push
+   button to implement this. Please see the 'Using DSOLE' topic in the help for a discussion
+   on Embedded and Linked objects.
+
+   The window is shown with the current container and OLE control site styles, set as
+   indicated by the displayed radio buttons and check boxes. You may modify any of 
+   these settings to achieve the behavior you require, by selection of the relevant 
+   control and selecting the Apply styles push button. Please see screenset dialog 
+   and the 'DSOLE Functions' topic in the help for full details.
+
+   Embedded objects can be made to retain any changes when their Persistent property
+   is set via the Dialog System definition software - Functions for the Load and save 
+   of persistency data are also demonstrated in this screenset.
+
+   You may manipulate embedded or linked objects via the DSOLE - DO VERB 
+   functionality (DOVB). This provides you with a mechanism to execute functions 
+   provided by OLE 2.0, on the objects you are working with. The available functions
+   are listed in the DoVerb selection box on the demonstration window. Note that 
+   support for these functions is provided by your object itself, so not all may be 
+   available for objects you are working with.
+
+   Once you have executed an OLE2.0  verb on the object you are dealing with, 
+   OLE-UPDATED events are received by the Dialog System screenset and the nature of
+   these events are displayed in a list box on the demonstration window.
+
+

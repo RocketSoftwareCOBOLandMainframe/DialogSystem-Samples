@@ -1,0 +1,5 @@
+[win-icons]
+dsicon    : dsicow32.dll  111
+on-line   : dsicow32.dll  102
+[win-bitmaps]
+ds        : dsbmpw32.dll  500

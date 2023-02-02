@@ -1,0 +1,19 @@
+;
+; Dialog System Resource Side File
+;
+
+;------------------ Microsoft Windows Images -------------------------------
+
+[win-icons]
+COMP_LOGO             : dsicow32.dll 0111
+COMP_DISPLAY          : dssamw32.dll 0201
+COMP_SYSTEM           : dssamw32.dll 0202
+COMP_PRINTER          : dssamw32.dll 0203
+COMP_FDISK            : dssamw32.dll 0204
+COMP_CABLE            : dssamw32.dll 0205
+COMP_PCBOARD          : dssamw32.dll 0206
+COMP_DISK             : dssamw32.dll 0207
+COMP_KEYBOARD         : dssamw32.dll 0208
+COMP_MOUSE            : dssamw32.dll 0209
+COMP_BOOKS            : dssamw32.dll 0210
+COMP_SOFTWARE         : dssamw32.dll 0211

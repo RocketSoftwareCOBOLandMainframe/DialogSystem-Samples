@@ -1,0 +1,50 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 CHECKB-DATA-BLOCK-VERSION-NO       PIC 9(8) COMP-5
+                                             VALUE 3.
+
+       01 CHECKB-VERSION-NO                  PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 CHECKB-SET-BUILD-NO                PIC 9(4) COMP-5
+                                             VALUE 6.
+
+       01 CHECKB-DATA-BLOCK.
+          03 CHECKB-WORKBENCH                PIC 9.
+             88 CHECKB-WORKBENCH-TRUE        VALUE 1.
+          03 CHECKB-TOOLSET                  PIC 9.
+             88 CHECKB-TOOLSET-TRUE          VALUE 1.
+          03 CHECKB-COBOL                    PIC 9.
+             88 CHECKB-COBOL-TRUE            VALUE 1.
+          03 CHECKB-DIALOG-SYSTEM            PIC 9.
+             88 CHECKB-DIALOG-SYSTEM-TRUE    VALUE 1.
+          03 CHECKB-PRODUCTS.
+             04 CHECKB-PRODUCTS-ITEM         OCCURS 4.
+                05 CHECKB-PRODUCT-DISPLAY    PIC X(15).
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 CHECKB-FIELD-NUMBERS.
+          03 CHECKB-FLD-NO-WORKBENCH         PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 CHECKB-FLD-NO-TOOLSET           PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 CHECKB-FLD-NO-COBOL             PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 CHECKB-FLD-NO-DIALOG-SYSTEM     PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 CHECKB-FLD-NO-PRODUCT-DISPLAY   PIC 9(4) COMP-5 VALUE
+                                               6.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

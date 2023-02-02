@@ -1,0 +1,133 @@
+   *********************************************************************
+
+                         Micro Focus Dialog System V3
+
+                   WebBrowser ActiveX Control Demonstration
+
+   *********************************************************************
+
+
+
+   Overview
+   --------
+
+   The IEDEMO screenset is provided as an example of how to use a
+   control program to add HTML page content (WebBrowser ActiveX Control) to you
+   Dialog System application.
+
+   The benefits of using this control are that you can vastly improve the
+   presentation of your graphical interface and tailor an HTML page to
+   appropriate users, whilst retaining the ability to use HTML elements in the
+   context of your application.
+
+
+   Files required
+   --------------
+
+   The files needed to run the demonstration program are:
+
+        Name of the file     Description of the file
+        ----------------     -----------------------
+        IEDEMO.GS            The demonstration screenset
+        IEDEMO.CBL           The application program
+         - iedemo.cpb        Screenset datablock copyfile
+         - ds-cntrl.mf       Dialog System Control Block copyfile
+
+        IEXPLORE.CBL         WebBrowser Control program
+         - iedemo.cpb        Screenset datablock copyfile
+         - strcture.cpy      Control Program interface copyfile
+         - mfole.cpy         Parameters/constants for OLE class Library
+         - vartypes.cpy      Variant type definitions
+         - olesafea.cpy      OLE Safearray definitions
+         - p2cevent.cpy      Class library event code identifier copyfile
+         - ds-call.cpy       Screenset CALLOUT Control block
+         - userctrl.cpy      Dialog System runtime/Control program interface
+                             definition
+         - createactivex.cpy Generic Control creation source code copy file
+
+        APP_NAVIGATE.HTM     The HTML page used
+        APP_NAVIGATE.MFF     The Net Express Form file
+
+        EXPLORER.APP         The Net Express project file
+
+        EXPLORER.TXT         This document.
+
+
+   Running The Demonstration Program
+   ---------------------------------
+
+   Load the supplied EXPLORER.APP file into your Net Express IDE and
+   select the Project/Rebuild All menu choice.
+
+   Before runnng the application you may need to edit the APP_NAVIGATE.HTM file
+   to alter the SRC property of the images used on the HTML page. This is
+   currently set to the relevant DialogSystem\Demo directory, but may need to be
+   changed based on your installed location.
+
+
+   Features
+   --------
+
+   The application starts by identifying the current directory location and,
+   placing the relevant location & HTML page name into the screenset data block.
+
+   At window creation time, the Dialog System runtime encounters the object
+   defined on the window, and calls the "create" entry point in the controls
+   associated program. This program places the control on the newly created
+   window.
+
+   The demonstration makes the WebBrowser control navigate to the nominated HTML
+   page and includes full details on configuring the control and manipulating it
+   at runtime. Note that not all of the WebBrowser controls' properties and
+   methods are available - see the Microsoft Internet SDK for full details.
+
+   The manipulation functions cover most of the functionality provided by the
+   control, in a context that Dialog System programmers will be familiar with
+   based on use the CALLOUT function to a control program.
+
+   Run the built application. The main window appears and the main window is
+   shown with the HTML page loaded. Select any of the HTML elements.
+
+   With the exception of the Micro Focus Home Page hyperlink, the HTML elements
+   perform client application navigation via the registered WebBrowser event
+   callback.
+
+   For these events, the application determines the URL passed with the event,
+   and using known delimiters based on the element type, the relevant event can
+   be passed into the screenset, or otherwise used to negotiate the application.
+
+   NOTE: These URL details passed with the event require the use of Internet
+   Explorer 5 to function correctly.
+
+   These manipulation functions are well documented in the dialog and COBOL
+   code.
+
+
+   Adding an ActiveX Control to your application
+   =============================================
+
+   This demonstration was created using the WebBrowser ActiveX
+   control that you can paint on your application window, by selecting
+   the Dialog System File/Import/ActiveX control menu choice. Select the
+   Microsoft WebBrowser item in the displayed dialog. The control is then added
+   to the Dialog System ActiveX toolbar palette. You can now paint the control
+   on your application window.
+
+   When the control is painted, the Control properties dialog appears, select
+   the "Add program to current project" check box and the "Generate" push button
+   to create the control program in your project.
+
+   You can now tailor the control program to meet the needs of your application
+   including the callback registration and navigation options as illustrated in
+   this demonstration.
+
+   Screenset Data import
+   ---------------------
+
+   If you have not used the New GUI Application Wizard to create your screenset,
+   you will need to import the following files contained in the
+   DialogSystem\Source directory:
+
+       FUNCDATA.IMP    The generic communication area used by all control
+                       programs
+

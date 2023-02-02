@@ -1,0 +1,44 @@
+   *********************************************************************
+
+                       Micro Focus Dialog System V3.0
+
+                       DIRDEMO Demonstration Program
+
+   *********************************************************************
+
+
+   DIRDEMO Demonstration Program
+   -----------------------------
+
+
+   Overview
+   --------
+
+   This DIRDEMO example shows how to use the DSDIR Dialog System
+   extension. It shows how to use the file open or save dialogs to
+   choose a file name and return it to the calling screenset.
+
+
+   Files Required
+   --------------
+
+   There is no program supplied with this demonstration.
+
+   The files needed to run the demonstration program are:
+
+   Name of the file     Description of the file
+   ----------------     -----------------------------------------------------
+     DIRDEMO.GS           The DIRDEMO screenset.
+
+     DSDIR.GNT            The DSDIR Dialog System Extension module.
+
+     DIRDEMO.TXT          This DIRDEMO document.
+     DIRDEMO.APP          The Net Express DIRDEMO project file.
+
+
+   Running the Demonstration Program
+   ---------------------------------
+   This demonstration can be run byselecting the Animate Run menu choice from
+   the Net Express IDE or by invoking the definition software.
+
+

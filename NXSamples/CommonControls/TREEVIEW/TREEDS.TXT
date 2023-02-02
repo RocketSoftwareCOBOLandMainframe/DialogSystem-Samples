@@ -1,0 +1,119 @@
+   *********************************************************************
+
+                        Micro Focus Dialog System V3.0
+
+                        Tree View Control Demonstration
+
+   *********************************************************************
+
+
+
+   Overview
+   --------
+
+   The TREEDS.GS screenset is provided as an example of how to use the 
+   control program TVIEW  to add a treeview control object to your
+   Dialog System application.
+
+
+   Files required
+   --------------
+
+   The files needed to run the demonstration program are:
+
+        Name of the file     Description of the file
+        ----------------     -----------------------
+        TREEDS.GS            The demonstration screenset
+
+        TVIEW.CBL            Control program template source code file
+         - ds-call.cpy       DS Callout control block
+         - p2cevent.cpy      Class library event code identifier copy file
+         - userctrl.cpy      Dialog System runtime/Control program interface
+                             definition
+         - funcdata.cpy      Generic template source code copy file
+         - strcture.cpy      ""
+         - evaluate.cpy      ""
+         - function.cpy      ""
+         - routines.cpy      "" 
+
+        TVIEW.GNT            The control template program for creating and
+                             manipulating a treeview control.
+
+        TREEDS.TXT           This document.
+
+
+   Running The Demonstration Program
+   ---------------------------------
+
+   Load the supplied TVIEW.APP file into your Net Express IDE and select the Project
+   Rebuild All menu choice. The project is pre-configured to run the screenset using
+   DSRUNNER, calls will be made to the controlling program in your project build
+
+   Features
+
+   --------
+
+   This demonstration shows how it is possible to create and maintain a 
+   treeview control on your Dialog System application window at run time. 
+
+   The demonstration illustrates use of both CALLOUT to the treeview
+   control template and use of the INVOKE dialog function to manipulate
+   the control.
+
+   The Treeview has been defined on the window as a User Control object
+   using the Dialog System definition software. The association between
+   the user control object and the control template, TVIEW.GNT, can be  
+   seen by viewing the User Control Properties dialog box. 
+
+   At window creation time, the Dialog System runtime encounters the user
+   control object defined on the window, and calls the "create" entry point
+   in the user control's associated program - TVIEW.GNT. This program places
+   the treeview control on the newly created window.
+
+   The Entry fields  Item 1 - Item 3 can be be typed into, providing text to
+   be placed in the tree view hierarchy. 
+ 
+   The tree branch/root hierarchy is established through use of the Level 1 
+   (preset) to Level 3 entry fields. Where a value of zero is used in these 
+   fields, the item is inserted at the root of the tree. Non zero values 
+   indicate that a previously inserted Tree item is to be the parent of this
+   one - thus establishing a branch.
+
+   Press the Load Tree View button to insert your items into treeview number 1.
+   
+ 
+   Each function pushbutton requires either one or two parameters, the first 
+   parameter always being the treeview number (creation order - 1 or 2)
+
+   One Parameter:
+		Set Focus
+   		Clear Object
+   		Refresh
+		Set Color
+
+   The second parameter is additionally required, and its value depends on
+   the function:
+
+   Two Parameters
+      Hide/Show 	- 0 = Hide / 1 = Show
+      SetMouseShape	- 0 = SYS-WAIT / 1 = SYS-ARROW
+      Dis/Enable	- 0 = Disable / 1 = Enable
+      DeleteItem	- n = the (n) item occurrence (from the inserted
+                              group)
+      SetItemState      - 0 = none selected / n = the (n) item occurrence
+                              (from the inserted group)
+      UpdateItem        -  the item occurrence (from the inserted group)               
+
+
+   Where a pushbutton is preceded with an *, this indicates that the function
+   has been implemented using the INVOKE dialog function to directly invoke
+   the required Class Library method on the treeview object. Although these
+   functions are also implemented in the control template, and can be called
+   using the procedural CALLOUT dialog function, an example of using the
+   INVOKE dialog function has been inlcuded to make you aware that Dialog
+   System can interface directly with the Class Library.   
+
+   Additional comments are available in the screenset and the control
+   template source code. 
+
+

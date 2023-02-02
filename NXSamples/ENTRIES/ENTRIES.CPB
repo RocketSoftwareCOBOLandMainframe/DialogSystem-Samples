@@ -1,0 +1,61 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 ENTRY-DATA-BLOCK-VERSION-NO        PIC 9(8) COMP-5
+                                             VALUE 4.
+
+       01 ENTRY-VERSION-NO                   PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 ENTRY-SET-BUILD-NO                 PIC 9(4) COMP-5
+                                             VALUE 12.
+
+       01 ENTRY-DATA-BLOCK.
+          03 ENTRY-NAME                      PIC X(15).
+          03 ENTRY-MALE                      PIC 9.
+             88 ENTRY-MALE-TRUE              VALUE 1.
+          03 ENTRY-ADDRESS                   PIC X(100).
+          03 ENTRY-CLUB                      PIC X(30).
+          03 ENTRY-AGE                       PIC X(3).
+          03 ENTRY-CODE                      PIC X(3).
+          03 ENTRY-FLAG-GROUP.
+             05 ENTRY-EXIT-FLG               PIC 9.
+                88 ENTRY-EXIT-FLG-TRUE       VALUE 1.
+             05 ENTRY-SAVE-FLG               PIC 9.
+                88 ENTRY-SAVE-FLG-TRUE       VALUE 1.
+             05 ENTRY-CLR-FLG                PIC 9.
+                88 ENTRY-CLR-FLG-TRUE        VALUE 1.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 ENTRY-FIELD-NUMBERS.
+          03 ENTRY-FLD-NO-NAME               PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 ENTRY-FLD-NO-MALE               PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 ENTRY-FLD-NO-ADDRESS            PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 ENTRY-FLD-NO-CLUB               PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 ENTRY-FLD-NO-AGE                PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 ENTRY-FLD-NO-CODE               PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 ENTRY-FLD-NO-EXIT-FLG           PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 ENTRY-FLD-NO-SAVE-FLG           PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 ENTRY-FLD-NO-CLR-FLG            PIC 9(4) COMP-5 VALUE
+                                               10.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

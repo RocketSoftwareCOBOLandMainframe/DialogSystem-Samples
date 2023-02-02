@@ -1,0 +1,59 @@
+   *********************************************************************
+
+                       Micro Focus Dialog System V3.0
+
+                       DYNMENU Demonstration Program
+
+   *********************************************************************
+
+
+   DYNMENU Demonstration Program
+   -----------------------------
+
+
+   Overview
+   --------
+
+   This DYNMENU example shows how a medium-sized menu bar can be
+   be maintained dynamically at run time.
+
+
+   Files required
+   --------------
+
+   There is no program supplied with this demonstration. The demonstration
+   can be run by invoking the definition software, or by using DSRUNNER.
+
+   The files needed to run the demonstration program are:
+
+   Name of the file     Description of the file
+   ----------------     -----------------------------------------------------
+     DYNMENU.GS           The DYNMENU Dialog System screenset file.
+
+     DYNMENU.ICN          The sidefile required by the demo.
+
+     DSICOW32.DLL         Icons used by the demo.
+
+     DYNMENU.TXT          This DYNMENU document.
+
+
+   Running the Demonstration Program
+   ---------------------------------
+
+   Run the screenset by loading it into the definition software, and
+   selecting the File, Run option from the menu bar.
+
+
+   Features
+   --------
+
+   This demonstration shows how it is possible to maintain a menu bar
+   at run time. The menu bar in this example is fully customizable (you
+   can select which options appear on it). As you change the options, the
+   menu bar is updated immediately.
+
+   In most cases, applications will only be changing a few menu items
+   dynamically, which can be implemented using just a few lines of dialog.
+
+   Comments have been added throughout the demonstration to explain how
+   it works.

@@ -1,0 +1,33 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 MULTENTR-DATA-BLOCK-VERSION-NO     PIC 9(8) COMP-5
+                                             VALUE 2.
+
+       01 MULTENTR-VERSION-NO                PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 MULTENTR-SET-BUILD-NO              PIC 9(4) COMP-5
+                                             VALUE 5.
+
+       01 MULTENTR-DATA-BLOCK.
+          03 MULTENTR-LARGE-ENTRY-FIELD      PIC X(9999).
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 MULTENTR-FIELD-NUMBERS.
+          03 MULTENTR-FLD-NO-LARGE-ENTRY-FI  PIC 9(4) COMP-5 VALUE
+                                               1.
+      * Field LARGE-ENTRY-FIELD has been truncated
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

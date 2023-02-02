@@ -1,0 +1,14 @@
+;
+; Dialog System Resource Side File
+;
+
+;------------------ Microsoft Windows Images -------------------------------
+
+[win-icons]
+mouseptr-icon     : dssamw32.dll 002
+
+[win-pointers]
+pencil-ptr        : dssamw32.dll 001
+
+[win-bitmaps]
+colourful         : dssamw32.dll 003

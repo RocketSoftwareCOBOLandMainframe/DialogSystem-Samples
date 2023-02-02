@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{535C04D7-A2A5-47C7-83E0-B340A995CD1F}") = "LVIEW", "LVIEW.cblproj", "{64970C4F-0AC0-475B-B760-F3B61773B269}"
+EndProject
+Project("{535C04D7-A2A5-47C7-83E0-B340A995CD1F}") = "LVICONS", "LVICONS.cblproj", "{91C3CC2D-622B-49AE-98B8-91EB09E2F5CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64970C4F-0AC0-475B-B760-F3B61773B269}.Debug|x86.ActiveCfg = Debug|x86
+		{64970C4F-0AC0-475B-B760-F3B61773B269}.Debug|x86.Build.0 = Debug|x86
+		{64970C4F-0AC0-475B-B760-F3B61773B269}.Release|x86.ActiveCfg = Release|x86
+		{64970C4F-0AC0-475B-B760-F3B61773B269}.Release|x86.Build.0 = Release|x86
+		{91C3CC2D-622B-49AE-98B8-91EB09E2F5CA}.Debug|x86.ActiveCfg = Debug|x86
+		{91C3CC2D-622B-49AE-98B8-91EB09E2F5CA}.Debug|x86.Build.0 = Debug|x86
+		{91C3CC2D-622B-49AE-98B8-91EB09E2F5CA}.Release|x86.ActiveCfg = Release|x86
+		{91C3CC2D-622B-49AE-98B8-91EB09E2F5CA}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

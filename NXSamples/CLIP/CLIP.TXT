@@ -1,0 +1,60 @@
+   *********************************************************************
+
+                      Micro Focus Dialog System V3.0
+
+                        CLIP Demonstration Program
+
+   *********************************************************************
+
+
+   CLIP Demonstration Program
+   --------------------------
+
+
+   Overview
+   --------
+
+   This CLIP demonstration shows how you can use Panels Version 2 to
+   provide clipboard functionality within Dialog System.
+
+
+   Files Required
+   --------------
+
+   The files needed to build and run the demonstration program are:
+
+   Name of the file     Description of the file
+   ----------------     -----------------------------------------------------
+     CLIP.GS              The CLIP Dialog System screenset.
+
+     CLIP.CBL             The CLIP COBOL program.
+      - ds-cntrl.mf       Dialog System Control File.
+      - pan2link.cpy      Panels Version 2 Call Interface File.
+     CLIP.APP             The CLIP Net Express project file
+
+     CLIP.TXT             This CLIP document.
+
+
+   Compiling and Running The Demonstration Program
+   -----------------------------------------------
+
+   In order to run the CLIP demonstration, you need to compile the
+   CLIP.CBL demonstration program.
+
+   Compile the CLIP.CBL program to .INT format using the Net Express Project/
+   Rebuild All menu choice.
+
+   Run or animate the program CLIP.INT using the Net Express Animate menu
+   choices or the relevant toolbar button.
+
+   Once you have invoked the demo, follow the on-screen instructions.
+
+
+   Extra Notes
+   -----------
+
+   When you compile a program from within the Net Express IDE, the
+   INT and IDY files may (depending on your project's build type) be
+   placed in a directory below your working directory. When running the
+   demonstration outside of the IDE you must make sure the project build
+   directory is on your COBDIR.

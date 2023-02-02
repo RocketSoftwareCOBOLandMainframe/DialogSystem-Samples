@@ -1,0 +1,101 @@
+   *********************************************************************
+
+                        Micro Focus Dialog System V3
+
+                       Rich Edit Control Demonstration
+
+   *********************************************************************
+
+
+
+   Overview
+   --------
+
+   The RICHED screenset is provided as an example of how to use a
+   control program to add a Rich Edit control to your Dialog System application.
+
+
+   Files required
+   --------------
+
+   The files needed to run the demonstration program are:
+
+        Name of the file     Description of the file
+        ----------------     -----------------------
+        RICHED.GS            The demonstration screenset
+        RE.CBL               The application program
+         - riched.cpb        Screenset datablock copyfile
+         - ds-cntrl.mf       Dialog System Control Block copyfile
+
+        RICHED.CBL           Rich Edit Control program
+         - riched.cpb        Screenset datablock copyfile
+         - strcture.cpy      Control Program interface copyfile
+         - p2cevent.cpy      Class library event code identifier copyfile
+         - userctrl.cpy      Dialog System runtime/Control program interface
+                             definition
+         - keys.cpy          Class library key code identifier copy file
+         - tbresid.cpy       Toolbar image resource identifier copy file
+         - mfrcwin.cpy       resource identifier copy file
+         - windows.cpy       The Windows header copy file
+         - callconv.cpy      Call convention definition file
+
+
+        RICHEDIT.APP         The Net Express project file
+
+        RICHEDIT.TXT         This document.
+
+
+   Running The Demonstration Program
+   ---------------------------------
+
+   Load the supplied RICHEDIT.APP file into your Net Express IDE and
+   select the Project/Rebuild All menu choice.
+
+
+   Features
+   --------
+
+   At window creation time, the Dialog System runtime encounters the object
+   defined on the window, and calls the "create" entry point in the controls
+   associated program. This program places the control on the newly created
+   window.
+
+   The demonstration creates a Rich Edit Control containing no initial text.
+
+   The demonstration illustrates how the control is interacted with and includes
+   full details on configuring the control and manipulating it at runtime.
+
+   The manipulation functions cover most of the functionality provided by the
+   control, in a procedural programming context that Dialog System programmers
+   will be familiar with.
+
+   Run the built application. The main window appears and the rich edit
+   control is shown with focus.
+
+   The manipulation functions are well documented in the COBOL code and additional
+   documentation is available for the rich edit class via the Net Express help.
+
+
+   Adding a Rich Edit Control to your application
+   ==============================================
+
+   This demonstration was created using the programmable Rich Edit
+   control that you can paint on your application window, by selecting
+   the Programmed controls tab of the Dialog System toolbar palette.
+
+   When the control is painted, the Control properties dialog appears, select
+   the "Add program to current project" check box and the "Generate" push button
+   to create the control program in your project.
+
+
+   Screenset Data import
+   ---------------------
+
+   If you have not used the New GUI Application Wizard to create the control
+   program, you will need to import the following files contained in the
+   DialogSystem\Source directory:
+
+       FUNCDATA.IMP    The generic communication area used by all control
+                       programs
+
+

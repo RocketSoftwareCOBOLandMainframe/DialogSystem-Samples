@@ -1,0 +1,100 @@
+   *********************************************************************
+
+                       Micro Focus Dialog System V3.0
+
+                       OBJECTS Demonstration Program
+
+   *********************************************************************
+
+
+   OBJECTS Demonstration Program
+   -----------------------------
+
+
+   Overview
+   --------
+
+   This OBJECTS example shows an example of most of the objects that
+   may be created using Dialog System.
+
+   OLE controls are not covered by this demonstration. See the DSOLE
+   demonstration for an example of an OLE control.
+
+   User controls are not covered by this demonstration. See the OCXDS,
+   SBARDS, SPINDS, TREEDS, and TBARDS demonstrations for examples of
+   user controls.
+
+
+   Files Required
+   --------------
+
+   The files needed to build and run the demonstration program are:
+
+   Name of the file     Description of the file
+   ----------------     -----------------------------------------------------
+     OBJECTS.GS           Objects screenset file.
+
+     PRIMWIN.GS           Primary windows screenset file.
+     SECWIN.GS            Secondary window screenset file.
+     DLGBOX.GS            Dialog box screenset file.
+     MSGBOX.GS            Message box screenset file.
+     ENTRY.GS             Entry Field screenset file.
+     PUSHB.GS             Pushbutton screenset file.
+     RADIOB.GS            Radio button screenset file.
+     CHECKB.GS            Check Box screenset file.
+     LISTBOX.GS           List box screenset file.
+     SELBOX.GS            Selection box screenset file.
+     MULTENTR.GS          Multiple line entry field screenset file.
+     SCROLL.GS            Scroll screenset file.
+     VSCROLL.GS           Vertical scroll screenset file.
+     TEXT.GS              Text screenset file.
+     GRPBOX.GS            Group box screenset file.
+     BITMAP.GS            Bitmap screenset file.
+     TABCTL.GS            Tab control screenset file.
+
+     Each of the above screensets has a .CPB Data Block copyfile.
+
+     OBJECTS.CBL          The Objects COBOL program.
+      - ds-cntrl.mf       Dialog System Control File.
+      - dssysinf.cpy      Dialog System System Information File.
+
+     BITMAP.ICN           The sidefile required by the demo.
+
+     OBJECTS.ERR          Error messages used by the demo.
+
+     OBJECTS.LST          List of files for batch mode copybook generation.
+
+     DSSAMW32.DLL         Bitmaps and icons used by the demo.
+
+     OBJECTS.TXT          This OBJECTS document.
+
+     OBJECTS.APP          The Net Express project file supplied with the demo.
+
+
+   Compiling and Running The Demonstration Program
+   -----------------------------------------------
+
+   In order to run the OBJECTS demonstration, you need to compile the
+   OBJECTS.CBL demonstration program.
+
+   Load the supplied Net Express project file and select Rebuild All
+   from the Project menu.
+
+   Run the demonstration by selecting Run from the Animate menu.
+
+
+   Features
+   --------
+
+   The demo program displays each of the objects that can be defined to
+   make up and design a Dialog System screenset.
+
+
+   Extra Notes
+   -----------
+
+   When you compile a program from within the Net Express IDE, the
+   INT and IDY files may (depending on your project's build type) be
+   placed in a directory below your working directory. When running the
+   demonstration outside of the IDE you must make sure the project build
+   directory is on your COBDIR.

@@ -1,0 +1,125 @@
+   *********************************************************************
+
+                        Micro Focus Dialog System V3
+
+                     Progress Bar Control Demonstration
+
+   *********************************************************************
+
+
+
+   Overview
+   --------
+
+   The PRGDEMO screenset is provided as an example of how to use a
+   control program to add a Progress Bar control to your Dialog System
+   application.
+
+
+   Files required
+   --------------
+
+   The files needed to run the demonstration program are:
+
+        Name of the file     Description of the file
+        ----------------     -----------------------
+        PRGDEMO.GS           The demonstration screenset
+        PRGDEMO.CBL          The application program
+         - prgdemo.cpb       Screenset datablock copyfile
+         - ds-cntrl.mf       Dialog System Control Block copyfile
+
+        PROGCTL.CBL          Progress Control program
+         - prgdemo.cpb       Screenset datablock copyfile
+         - strcture.cpy      Control Program interface copyfile
+         - p2cevent.cpy      Class library event code identifier copyfile
+         - userctrl.cpy      Dialog System runtime/Control program interface
+                             definition
+
+        PROGRESS.APP         The Net Express project file
+
+        PROGRESS.TXT         This document.
+
+
+   Running The Demonstration Program
+   ---------------------------------
+
+   Load the supplied PROGRESS.APP file into your Net Express IDE and
+   select the Project/Rebuild All menu choice.
+
+
+   Features
+   --------
+
+   At window creation time, the Dialog System runtime encounters the object
+   defined on the window, and calls the "create" entry point in the controls
+   associated program. This program places the control on the newly created
+   window.
+
+   Run the built application. The main window appears containing two entry
+   fields which, for this demonstration will simulate the start and end
+   positions (for instance the number of records to read) of the processing loop
+   that your application enters.
+
+   Accept the defaults and press the Processing Loop pushbutton.
+
+   This pushbutton places focus onto a 'Processing...' dialog, and the
+   WINDOW-CREATED event calls out to the control program to initialize with the
+   object handle of any CANCEL pushbutton required, as well as the expected
+   end position (100% complete) of the loop.
+
+   As with a typical application, a RETC then returns to the calling program,
+   which enters a processing loop (data access etc) and in that loop, "STEP"
+   function calls are made to the control program to advise the current
+   progress position.
+
+   You will note the use of the runUntilEmpty method in this STEP call, which
+   allows the CANCEL button events to be processed when they occur, to allow
+   processing to be interrupted.
+
+   These manipulation functions are well documented in the dialog and COBOL
+   code and additional documentation is available for the List View class
+   via the Net Express help.
+
+
+   Adding a List Control to your application
+   =========================================
+
+   This demonstration was created using the programmable Progress bar
+   control that you can paint on your application window, by selecting
+   the Programmed controls tab of the Dialog System toolbar palette.
+
+   When the control is painted, the Control properties dialog appears, select
+   the "Add program to current project" check box and the "Generate" push button
+   to create the control program in your project.
+
+   You need to place the INITIALIZE call in your application to establish
+   the CANCEL button and initial maximum range, as illustrated in this
+   demonstration. You also need to modify the generated code in the "TO DO"
+   comment sections of the generated program. These modifications are detailed
+   below.
+
+   Screenset Data import
+   ---------------------
+
+   If you have not used the New GUI Application Wizard to create the control
+   program, you will need to import the following files contained in the
+   DialogSystem\Source directory:
+
+       FUNCDATA.IMP    The generic communication area used by all control
+                       programs
+
+
+   Modifications required
+   ----------------------
+
+   The generated program has comments containing "TO DO" items, and you need to
+   modify the program to enable each Progress bar you use, to be correctly
+   configured to meet your requirements.
+
+   These simple modifications are well documented in the source code - search
+   for "TO DO" - and are as follows:
+
+       -   Estabish the Datablock Master field to be used when the processing is
+           interrupted by any CANCEL pushbutton. This is then examined during
+           the application processing loop to determine when to interrupt
+           processing.

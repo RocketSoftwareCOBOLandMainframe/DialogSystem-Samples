@@ -1,0 +1,47 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 DATA-BLOCK-VERSION-NO              PIC 9(8) COMP-5
+                                             VALUE 1.
+
+       01 VERSION-NO                         PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 SET-BUILD-NO                       PIC 9(4) COMP-5
+                                             VALUE 6.
+
+       01 DATA-BLOCK.
+          03 MY-INSTANCE-NO                  PIC 9(4).
+          03 PROGRAM-STRING                  PIC X(32).
+          03 REASON-FOR-RETURNING            PIC X.
+          03 PROGRAM-VALUE-1                 PIC S9(4).
+          03 PROGRAM-VALUE-2                 PIC S9(4).
+          03 RESULT-VALUE                    PIC S9(4).
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 FIELD-NUMBERS.
+          03 FLD-NO-MY-INSTANCE-NO           PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 FLD-NO-PROGRAM-STRING           PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 FLD-NO-REASON-FOR-RETURNING     PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 FLD-NO-PROGRAM-VALUE-1          PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 FLD-NO-PROGRAM-VALUE-2          PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 FLD-NO-RESULT-VALUE             PIC 9(4) COMP-5 VALUE
+                                               6.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

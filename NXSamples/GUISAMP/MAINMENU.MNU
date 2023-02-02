@@ -1,0 +1,69 @@
+//Micro Focus menu resource file template. Copyright (C) Micro Focus 1996.//
+
+// Menu
+
+
+#include <mfrcwin.h>
+#include <mfres.h>
+
+ID_MENUBAR MENU 
+BEGIN
+   POPUP "&Run Demos"
+   BEGIN
+      MENUITEM "&Group Box With Radio Buttons",   ID_GROUP_BOX_WITH_RADIOS
+      MENUITEM "&Check Boxes",                    ID_CHECK_BOX
+      MENUITEM SEPARATOR
+      POPUP "&Lists"
+      BEGIN
+         MENUITEM "&Combo Boxes",                 ID_COMBO_BOX
+         MENUITEM "&List Boxes",                  ID_LIST_BOX
+         MENUITEM "&Tree Views",                  ID_TREE_VIEW
+         MENUITEM "&UpDown Controls",             ID_UP_DOWN_CONTROLS
+      END
+      MENUITEM SEPARATOR
+      MENUITEM "&Text And Edit Fields",           ID_TEXT_EDIT_FIELDS1
+      MENUITEM "Lose And Gain &Focus",            ID_TEXT_EDIT_FIELDS2
+      MENUITEM "&Scroll Bars",                    ID_SCROLLBARS
+      MENUITEM "Message &Box",                    ID_MESSAGE_BOX
+      MENUITEM SEPARATOR
+      POPUP "&Menus"
+      BEGIN
+         MENUITEM "&Enable Menu Items",           ID_ENABLE_MENU
+         MENUITEM "&Disable Menu Items",          ID_DISABLE_MENU
+      END
+      MENUITEM SEPARATOR
+      MENUITEM "E&xit",                           ID_EXIT_SYSTEM
+   END
+   POPUP "&Help"
+   BEGIN
+      MENUITEM "&About",                          ID_ABOUT
+   END
+END
+
+
+//
+// String Table for menu hinting
+//
+
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    ID_GROUP_BOX_WITH_RADIOS "Demonstrates Radio Buttons within a Group Box\nGroup Box With Radio Buttons"
+    ID_COMBO_BOX             "Demonstrates the different types of Combo Box\nCombo Boxes"
+    ID_LIST_BOX              "Demonstrates the different types of List Box\nList Boxes"
+    ID_CHECK_BOX             "Demonstrates a Check Box\nCheck Boxes"
+    ID_TEXT_EDIT_FIELDS1     "Demonstrates basic Text and Edit Field processing\nText Fields And Edit Fields"
+    ID_TEXT_EDIT_FIELDS2     "Demonstrates lost and gained focus on fields\nLose And Gain Focus"
+    ID_SCROLLBARS            "Demonstrates Scroll Bars\nScroll Bars"
+    ID_UP_DOWN_CONTROLS      "Demonstrates Up Down Controls\nUpDown Controls"
+    ID_TREE_VIEW             "Demonstrates a Tree View control\nTree Views"
+    ID_ENABLE_MENU           "Enables All menu items Except this One\nEnable Menu Items"
+    ID_DISABLE_MENU          "Disables all menu items except Enable Menu Items\nDisable Menu Items"
+    ID_MESSAGE_BOX           "Displays a Message Box on the screen\nMessage Box"
+    ID_EXIT_SYSTEM           "Exits from the demonstration - just like the close box\nExit"
+    ID_ABOUT                 "Displays a simple About Box\nAbout"
+END
+
+
+
+

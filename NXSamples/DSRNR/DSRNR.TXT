@@ -1,0 +1,74 @@
+   *********************************************************************
+
+                       Micro Focus Dialog System V3.0
+
+                        DSRNR Demonstration Program
+
+   *********************************************************************
+
+
+   DSRNR Demonstration Program
+   ---------------------------
+
+
+   Overview
+   --------
+
+   This DSRNR example is an example of a screenset that uses DSRUNNER.
+
+   The DSRUNNER screenset is an example of a 'main' screenset that can
+   be used to start other DSRUNNER screensets. You are free to use and
+   modify the screenset in any way to package with your application.
+
+   The DSRNR screenset is started by the DSRUNNER example screenset.
+   It shows how to write a sub-program that is called by DSRUNNER, and
+   includes initialization, termination, error handling and so on.
+
+
+   Files Required
+   --------------
+
+   There is no main program supplied with this demonstration. The
+   demonstration is designed to be run using DSRUNNER.
+
+   The files needed to build and run the demonstration program are:
+
+   Name of the file     Description of the file
+   ----------------     -----------------------------------------------------
+     DSRNR.GS             The DSRNR Dialog System screenset.
+
+     DSRUNNER.GS          DSRUNNER screenset.
+
+     DSRNR.CBL            The DSRNR COBOL program.
+      - dsrunner.cpy      DSRUNNER information COPY file.
+      - dssysinf.cpy      Dialog System system information file.
+
+     DSRUNNER.GNT         The DSRUNNER main program.
+
+     DSRNR.APP            The Net Express project file supplied with the demo.
+
+     DSRNR.CPB            The Dialog System data block copyfile for DSRNR.GS.
+
+     DSRNR.TXT            This DSRNR document.
+
+
+   Compiling and Running The Demonstration Program
+   -----------------------------------------------
+
+   In order to run the DSRNR demonstration, you need to compile the
+   DSRNR.CBL demonstration program.
+
+   Load the supplied Net Express project file and select Rebuild All
+   from the Project menu.
+
+   Run the demonstration by selecting Run from the Animate menu.
+
+
+   Extra Notes
+   -----------
+
+   When you compile a program from within the Net Express IDE, the
+   INT and IDY files may (depending on your project's build type) be
+   placed in a directory below your working directory. When running the
+   demonstration outside of the IDE you must make sure the project build
+   directory is on your COBDIR.

@@ -1,0 +1,94 @@
+   *********************************************************************
+
+                          Micro Focus Dialog System V3
+
+                    Using Windows Image formats Demonstration
+
+   *********************************************************************
+
+
+
+   Overview
+   --------
+
+   The IMAGE screenset is provided as an example of how to use a
+   control program to add any Windows Picture object files to your Dialog
+   System application.
+
+
+   Files required
+   --------------
+
+   The files needed to run the demonstration program are:
+
+        Name of the file     Description of the file
+        ----------------     -----------------------
+        IMAGE.GS             The demonstration screenset
+        IMAGE.CBL            The application program
+         - image.cpb         Screenset datablock copyfile
+         - ds-cntrl.mf       Dialog System Control Block copyfile
+
+        IMAGECTL.CBL         Image management control program
+         - image.cpb         Screenset datablock copyfile
+         - strcture.cpy      Control Program interface copyfile
+         - p2cevent.cpy      Class library event code identifier copyfile
+         - ds-call.cpy       Screenset CALLOUT Control block
+         - userctrl.cpy      Dialog System runtime/Control program interface
+                             definition
+
+        DSWINDOW.CBL         Class program which sub-classes the application
+                             window to enable the images to be painted.
+
+        IMAGES.APP           The Net Express project file
+
+        IMAGES.TXT           This document.
+
+
+   Running The Demonstration Program
+   ---------------------------------
+
+   Load the supplied IMAGES.APP file into your Net Express IDE and
+   select the Project/Rebuild All menu choice.
+
+
+   Features
+   --------
+
+   At window creation time, the Dialog System runtime encounters the User
+   control object defined on the window, and calls the "create" entry point in
+   the controls associated program. This program forces the sub-classing of the
+   application window so that the DSWINDOW class can paint the picture object
+   on the newly created window.
+
+
+   Run the built application. The main window appears and the image is
+   displayed.  Select the Browse push button to select any other valid Windows
+   Picture object file type.
+
+
+
+   Adding a User Control to your application
+   =========================================
+
+   This demonstration was created using the programmable User control that you
+   you can paint on your application window, by selecting the User Control
+   object on the Objects tab of the Dialog System toolbar palette.
+
+   When the control is painted, the Control properties dialog appears, select
+   the "Add program to current project" check box and the "Generate" push button
+   to create a skeleton - non functional - control program in your project.
+
+   Tailor the control program to provide the functionality you require, as has
+   been done with this demonstration.
+
+
+   Screenset Data import
+   ---------------------
+
+   If you have not used the New GUI Application Wizard to create the control
+   program, you will need to import the following files contained in the
+   DialogSystem\Source directory:
+
+       FUNCDATA.IMP    The generic communication area used by all control
+                       programs
+

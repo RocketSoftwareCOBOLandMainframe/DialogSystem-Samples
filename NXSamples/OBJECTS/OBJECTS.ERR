@@ -1,0 +1,5 @@
+@#! Dialog System Error Message File !#@                                    
+This field must not be left empty.                                          
+Must be greater than 99.99                                                  
+Must be in range 100-200,000                                                
+Date is the wrong format.                                                   

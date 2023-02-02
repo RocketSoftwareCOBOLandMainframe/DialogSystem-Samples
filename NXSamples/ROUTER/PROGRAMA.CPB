@@ -1,0 +1,55 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 PROGRAMA-DATA-BLOCK-VERSION-NO     PIC 9(8) COMP-5
+                                             VALUE 1.
+
+       01 PROGRAMA-VERSION-NO                PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 PROGRAMA-SET-BUILD-NO              PIC 9(4) COMP-5
+                                             VALUE 4.
+
+       01 PROGRAMA-DATA-BLOCK.
+          03 PROGRAMA-FLAGS.
+             05 PROGRAMA-TERMINATE           PIC 9.
+                88 PROGRAMA-TERMINATE-TRUE   VALUE 1.
+             05 PROGRAMA-OTHER-SET           PIC 9.
+                88 PROGRAMA-OTHER-SET-TRUE   VALUE 1.
+             05 PROGRAMA-PROGRAM-B           PIC 9.
+                88 PROGRAMA-PROGRAM-B-TRUE   VALUE 1.
+             05 PROGRAMA-PROGRAM-C           PIC 9.
+                88 PROGRAMA-PROGRAM-C-TRUE   VALUE 1.
+          03 PROGRAMA-FIELD1                 PIC X(10).
+          03 PROGRAMA-FIELD2                 PIC 9(6)V9(2).
+          03 PROGRAMA-FIELD3                 PIC S9(6).
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 PROGRAMA-FIELD-NUMBERS.
+          03 PROGRAMA-FLD-NO-TERMINATE       PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 PROGRAMA-FLD-NO-OTHER-SET       PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 PROGRAMA-FLD-NO-PROGRAM-B       PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 PROGRAMA-FLD-NO-PROGRAM-C       PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 PROGRAMA-FLD-NO-FIELD1          PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 PROGRAMA-FLD-NO-FIELD2          PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 PROGRAMA-FLD-NO-FIELD3          PIC 9(4) COMP-5 VALUE
+                                               8.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

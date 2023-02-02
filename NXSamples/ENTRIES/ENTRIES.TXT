@@ -1,0 +1,66 @@
+   *********************************************************************
+
+                       Micro Focus Dialog System V3.0
+
+                       ENTRIES Demonstration Program
+
+   *********************************************************************
+
+
+   ENTRIES Demonstration Program
+   -----------------------------
+
+
+   Overview
+   --------
+
+   The ENTRIES.CBL program drives the ENTRIES.GS screenset that you can
+   create by following the chapter "No Programming Required" in the
+   Dialog System User Guide. The chapter "Using the Screenset" explains
+   the program itself. A completed version of this screenset is included
+   as part of this example and can be used as a guide if you experience
+   difficulty when creating your own.
+
+
+   Files Required
+   --------------
+
+   The files needed to build and run the demonstration program are:
+
+   Name of the file     Description of the file
+   ----------------     -----------------------------------------------------
+     ENTRIESX.GS          The completed ENTRIES screenset.
+
+     ENTRIES.CBL          The cobol program to drive the demonstration.
+      - ds-cntrl.mf       Dialog System control file.
+
+     ENTRIES.TXT          This ENTRIES document
+
+     ENTRIES.CPB          The Dialog System data block copyfile for ENTRIES.GS.
+
+     ENTRIES.APP          The Net Express project file supplied with the demo.
+
+   If you plan to run the completed version of the screenset (rather than
+   creating your own) then rename entriesx.gs to entries.gs.
+
+
+   Compiling and Running The Demonstration Program
+   -----------------------------------------------
+
+   In order to run the ENTRIES demonstration, you need to compile the
+   ENTRIES.CBL demonstration program.
+
+   Load the supplied Net Express project file and select Rebuild All
+   from the Project menu.
+
+   Run the demonstration by selecting Run from the Animate menu.
+
+
+   Extra Notes
+   -----------
+
+   When you compile a program from within the Net Express IDE, the
+   INT and IDY files may (depending on your project's build type) be
+   placed in a directory below your working directory. When running the
+   demonstration outside of the IDE you must make sure the project build
+   directory is on your COBDIR.

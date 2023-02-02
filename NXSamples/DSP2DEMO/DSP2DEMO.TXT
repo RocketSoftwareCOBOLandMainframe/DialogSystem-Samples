@@ -1,0 +1,88 @@
+   *********************************************************************
+
+                      Micro Focus Dialog System V3.0
+
+                      DSP2DEMO Demonstration Program
+
+   *********************************************************************
+
+
+   DSP2DEMO Demonstration Program
+   ------------------------------
+
+
+   Overview
+   --------
+
+   This DSP2DEMO example shows several examples of how to use Panels
+   Version 2 to enhance Dialog System screensets. See the Features
+   section later for further details.
+
+
+   Files Required
+   --------------
+
+   The files needed to build and run the demonstration program are:
+
+   Name of the file     Description of the file
+   ----------------     -----------------------------------------------------
+     DSP2DEMO.GS          The DSP2DEMO Dialog System screenset
+      - ds-cntrl.mf       Dialog System control file
+      - dssysinf.cpy      Dialog System system information file
+
+     DSP2DEMO.CBL         The DSP2DEMO COBOL program
+
+     DSP2DEMO.TXT         This DSP2DEMO document
+
+
+   Compiling and Running The Demonstration Program
+   -----------------------------------------------
+
+   In order to run the DSP2DEMO demonstration, you need to compile the
+   DSP2DEMO.CBL demonstration program.
+
+   Compile the DSP2DEMO.CBL program to .INT format using the Net Express
+   Project, Rebuild All menu choice.
+
+   To run the program having created the .INT file as detailed above,
+   run or animate the program usin the Net Express Animate menu or toolbar
+   buttons.
+
+
+   Features
+   --------
+
+   There are 3 featured examples:
+
+   1. Using Panels Version 2 to color an object. Although this is made
+      redundant by the SET-COLOR function, and color selection at
+      definition time, it shows how simple it is to modify screen
+      objects with a single PANELS2 call.
+
+   2. Using Panels Version 2 to access the clipboard
+
+   3. Handling Panels Version 2 events back in your application program.
+      This particular example shows how to scroll a window (again this is
+      redundant with scrollable windows in Dialog System), but it shows
+      the techniques required.
+
+
+   Extra Notes
+   -----------
+
+   Please note that to avoid over-complicating the demonstration, not
+   all scroll bar events are handled by this program. In particular,
+   the dragging of the slider thumb is not supported.
+
+   In order to close the events window, you should press the 'Cancel'
+   push button. When the events demonstration window appears, this button
+   is not visible. You must scroll the window down and right in order to
+   see the button. The remainder of the gadgets on the window have no
+   actions associated with them. You can also close the window using the
+   system menu.
+
+   When you compile a program from within the Net Express IDE, the
+   INT and IDY files may (depending on your project's build type) be
+   placed in a directory below your working directory. When running the
+   demonstration outside of the IDE you must make sure the project build
+   directory is on your COBDIR.

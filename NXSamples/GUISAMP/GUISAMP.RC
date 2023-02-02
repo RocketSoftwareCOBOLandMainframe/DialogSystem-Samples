@@ -1,0 +1,214 @@
+#include "mfres.h"
+/* Micro Focus Resource File. */
+/* Version 4.00.017 */
+#include <mfrcwin.h>
+/*MF_BITMAP*/
+IDB_SPLASH_SCREEN  BITMAP PRELOAD DISCARDABLE guisamp.bmp
+/*MF_CURSOR*/
+/*MF_DIALOG*/
+// #include "COMBOBOX.DLG"
+/* Micro Focus Dialog Editor generated this script */
+/* DlgEdit: Version 1.00.23 */
+
+#include <mfrcwin.h>
+#include "mfres.h"
+1 DLGINCLUDE "mfres.h"
+
+COMBO_BOX_SCREEN DIALOG 6, 18, 269, 165
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Combination Selection Box Demonstration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "", SIMPLE_COMBO_BOX, "ComboBox", CBS_SIMPLE | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP, 7, 8, 48, 45
+    CONTROL         "", DROP_COMBO_BOX, "ComboBox", CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP, 7, 54, 48, 53
+    CONTROL         "", DROPLIST_COMBO_BOX, "ComboBox", CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP, 7, 85, 48, 53
+    CONTROL         "OK", IDOK, "Button", WS_TABSTOP, 221, 124, 40, 14
+    CONTROL         "Cancel", IDCANCEL, "Button", WS_TABSTOP, 221, 145, 40, 
+                    14
+    CONTROL         "Simple Combination Box - Enter your own value into the field, or select an item from the list", 
+                    -1, "Static", WS_GROUP, 63, 7, 189, 19
+    CONTROL         "Drop Down Comb. Box - Same as the simple box, with the exception that the list is only displayed when you click on the down arrow", 
+                    -1, "Static", WS_GROUP, 61, 55, 199, 26
+    CONTROL         "Drop List Comb. box - You must select an item from the supplied list. Typing the initial letters of an item in the list will enter that item into the entry box", 
+                    -1, "Static", WS_GROUP, 61, 86, 196, 27
+    CONTROL         "Enter data into the list boxes above. Upon pressing the OK button, a message box will appear,  containing the items which you selected from each list box. Pressing OK on the message box will return you to this screen. To terminate press Cancel", 
+                    -1, "Static", WS_GROUP, 6, 114, 173, 44
+END
+// #include "GROUPBOX.DLG"
+GROUP_RADIO_SCREEN DIALOG 6, 18, 202, 133
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Group With Radio Buttons Demonstration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Radio Group", RADIO_GROUP, "Button", BS_GROUPBOX, 21, 
+                    13, 66, 70
+    CONTROL         "OK", IDOK, "Button", WS_TABSTOP, 53, 113, 40, 14
+    CONTROL         "Cancel", IDCANCEL, "Button", WS_TABSTOP, 109, 113, 40, 
+                    14
+    CONTROL         "Hourly", RADIO_HOURLY, "Button", BS_AUTORADIOBUTTON, 30, 
+                    27, 39, 10
+    CONTROL         "Daily", RADIO_DAILY, "Button", BS_AUTORADIOBUTTON, 30, 
+                    40, 39, 10
+    CONTROL         "Weekly", RADIO_WEEKLY, "Button", BS_AUTORADIOBUTTON, 30, 
+                    53, 39, 10
+    CONTROL         "Monthly", RADIO_MONTHLY, "Button", BS_AUTORADIOBUTTON, 
+                    30, 66, 39, 10
+    CONTROL         "Select a radio button. Pressing OK will then display a message box containing your selection. Pressing OK on the message box will return to this screen. Press Cancel to terminate.", 
+                    -1, "Static", WS_GROUP, 102, 17, 87, 67
+END
+// #include "LOSEGAIN.DLG"
+DLG_LOSE_AND_GAIN_FOCUS DIALOG 8, 15, 306, 109
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | 
+    DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Using 'Lost Focus' & 'Gained Focus' events on Edit Fields"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "", EF_EDIT_FIELD1, "Edit", ES_AUTOHSCROLL | WS_BORDER | 
+                    WS_TABSTOP, 27, 57, 111, 12
+    CONTROL         "This Dialog Box shows two Edit Fields - Each is given an initial value in the program.  As you enter and leave each Edit Field, the text will change between ""Gained focus"" and ""Lost Focus"". Try Using Tab & Shift+Tab to move between the fields and button", 
+                    -1, "Static", WS_GROUP, 12, 11, 281, 33
+    CONTROL         "", EF_EDIT_FIELD2, "Edit", ES_AUTOHSCROLL | WS_BORDER | 
+                    WS_TABSTOP, 164, 57, 112, 13
+    CONTROL         "OK", IDOK, "Button", WS_TABSTOP, 133, 89, 40, 14
+END
+// #include "LSTBOX.DLG"
+LIST_BOX_SCREEN DIALOG 6, 18, 267, 161
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "List Box Demonstration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "", SINGLE_LIST_BOX, "ListBox", LBS_NOTIFY | LBS_SORT | 
+                    WS_BORDER | WS_VSCROLL | WS_TABSTOP, 9, 9, 48, 46
+    CONTROL         "", MULTIPLE_LIST_BOX, "ListBox", LBS_NOTIFY | LBS_SORT | 
+                    LBS_MULTIPLESEL | WS_BORDER | WS_VSCROLL | WS_TABSTOP, 
+                    126, 10, 48, 49
+    CONTROL         "", EXTENDED_LIST_BOX, "ListBox", LBS_NOTIFY | LBS_SORT | 
+                    LBS_EXTENDEDSEL | WS_BORDER | WS_VSCROLL | WS_TABSTOP, 9, 
+                    64, 48, 48
+    CONTROL         "OK", IDOK, "Button", WS_TABSTOP, 215, 121, 40, 14
+    CONTROL         "Cancel", IDCANCEL, "Button", WS_TABSTOP, 215, 142, 40, 
+                    14
+    CONTROL         "Simple List Box - Select an item contained within the list", 
+                    -1, "Static", WS_GROUP, 64, 10, 57, 47
+    CONTROL         "Multiple List Box - Select as many items from the list as you wish", 
+                    -1, "Static", WS_GROUP, 182, 10, 63, 49
+    CONTROL         "Extended List Box -          Select an item from the list box, and then drag the mouse to select other items", 
+                    -1, "Static", WS_GROUP, 65, 63, 90, 36
+    CONTROL         "Enter data into the list boxes above. Upon pressing the OK button, a message box will appear,  containing the items which you selected from each list box. Pressing OK on the message box will return you to this screen. To terminate press Cancel", 
+                    -1, "Static", WS_GROUP, 10, 116, 181, 39
+END
+// #include "TEXTEDIT.DLG"
+DLG_TEXT_EDIT_FIELD_DEMO DIALOG 9, 29, 270, 132
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | 
+    DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Use Of Text fields & Edit Fields"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "This Dialog Box shows a Text Field and an Edit Field.  To perform actions on these fields, click the buttons and animate through the code", 
+                    -1, "Static", WS_GROUP, 9, 7, 159, 31
+    CONTROL         "This Is A Text Field", TF_TEXT_FIELD, "Static", 
+                    WS_GROUP, 15, 62, 71, 12
+    CONTROL         "", EF_EDIT_FIELD, "Edit", ES_AUTOHSCROLL | WS_BORDER | 
+                    WS_TABSTOP, 87, 61, 71, 12
+    CONTROL         "Accept Fields", PB_ACCEPT_FIELDS, "Button", WS_TABSTOP, 
+                    185, 6, 79, 14
+    CONTROL         "Change Text Field", PB_CHANGE_TEXT_FIELD, "Button", 
+                    WS_TABSTOP, 185, 23, 79, 14
+    CONTROL         "Pre-Display Edit Field", PB_PREDISPLAY_EDIT_FIELD, 
+                    "Button", WS_TABSTOP, 185, 40, 79, 14
+    CONTROL         "Disable Edit Field", PB_DISABLE_EDIT_FIELD, "Button", 
+                    WS_TABSTOP, 185, 57, 79, 14
+    CONTROL         "Enable Edit Field", PB_ENABLE_EDIT_FIELD, "Button", 
+                    WS_TABSTOP, 185, 74, 79, 14
+    CONTROL         "", 305, "Static", SS_BLACKFRAME, 9, 52, 156, 29
+    CONTROL         "Cancel", IDCANCEL, "Button", WS_TABSTOP, 115, 112, 40, 
+                    14
+END
+// #include "TREVIEW.DLG"
+DLG_TREEVIEW_DEMO DIALOG 3, -13, 310, 137
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Tree View"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Close", IDOK, "Button", WS_TABSTOP, 135, 117, 40, 14
+END
+
+// #include "UPDOWN.DLG"
+DLG_UP_DOWN_CONTROLS DIALOG 6, 18, 160, 100
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "updown control"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Cancel", IDCANCEL, "Button", WS_TABSTOP, 53, 61, 40, 14
+    CONTROL         "", UD_UPDOWN_CONTROL1, "msctls_updown32", 
+                    UDS_SETBUDDYINT | WS_BORDER | WS_GROUP, 4, 15, 12, 18
+    CONTROL         "", EF_EDIT_FIELD3, "Edit", ES_AUTOHSCROLL | ES_READONLY | 
+                    ES_NUMBER | WS_BORDER | WS_TABSTOP, 18, 15, 32, 18
+    CONTROL         "", LB_LISTBOX, "ListBox", LBS_NOTIFY | LBS_SORT | 
+                    WS_BORDER | WS_VSCROLL | WS_TABSTOP, 98, 15, 48, 40
+    CONTROL         "", UD_UPDOWN_CONTROL2, "msctls_updown32", 
+                    UDS_SETBUDDYINT | WS_BORDER | WS_GROUP, 82, 15, 12, 20
+END
+// #include "CHKBOX.DLG"
+DLG_CHECKBOX_DEMO DIALOG 10, 25, 187, 128
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | DS_CENTER | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Use Of Check Boxes"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "This Dialog Box shows two Check Boxes :", -1, "Static", 
+                    WS_GROUP, 20, 12, 159, 15
+    CONTROL         "Show Values", IDOK, "Button", WS_TABSTOP, 20, 107, 65, 
+                    15
+    CONTROL         "This one is initialised to ""Checked""", CHK_CHECKBOX1, 
+                    "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 20, 33, 150, 10
+    CONTROL         "This one is initialised to ""Not Checked""", 
+                    CHK_CHECKBOX2, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 
+                    20, 49, 145, 10
+    CONTROL         "Cancel", IDCANCEL, "Button", WS_TABSTOP, 101, 107, 65, 
+                    15
+    CONTROL         "Change the check boxes and click ""Show Values""", -1, 
+                    "Static", WS_GROUP, 19, 73, 153, 8
+END
+// #include "ABOUTBOX.DLG"
+DLG_ABOUT DIALOG 21, 23, 217, 167
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "About This GUI Samples Application "
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Copyright (c) Micro Focus Ltd 1996", -1, "Static", 
+                    SS_CENTER | WS_GROUP, 0, 120, 217, 13
+    CONTROL         "OK", IDOK, "Button", WS_TABSTOP, 88, 147, 40, 14
+    CONTROL         "This Application is designed to demonstrate some of the basic GUI controls, how to use them and how to code them", 
+                    -1, "Static", SS_CENTER | WS_GROUP, 13, 30, 194, 22
+    CONTROL         "Each Demonstration has been kept simple, so that it may be easily understood by animating through the code", 
+                    -1, "Static", SS_CENTER | WS_GROUP, 13, 52, 194, 23
+    CONTROL         "You may wish to use some of the code here as the basis of your own application", 
+                    -1, "Static", SS_CENTER | WS_GROUP, 13, 75, 194, 23
+    CONTROL         "Micro Focus GUI Samples Application V2.0", -1, "Button", 
+                    BS_GROUPBOX, 5, 10, 208, 97
+END
+/*MF_ICON*/
+IDICON_CHILDWIN  ICON PRELOAD DISCARDABLE childwin.ICO
+IDICON_GUISAMP  ICON LOADONCALL DISCARDABLE guisamp.ICO
+/*MF_MENU*/
+#include "MAINMENU.MNU"
+/*MF_RCDATA_END*/

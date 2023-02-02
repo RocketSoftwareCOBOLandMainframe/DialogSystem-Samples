@@ -1,0 +1,201 @@
+   *********************************************************************
+
+		       Micro Focus Dialog System V3.0
+
+		       Toolbar Control Demonstration
+
+   *********************************************************************
+
+
+
+   Overview
+   --------
+
+   The TBARDS.GS screenset is provided as an example of how a class 
+   library menu bar and toolbar can be added to your Dialog System 
+   application using a user control.
+   Control functions in TBAR.CBL can then be used to manipulate
+   these controls. To enable menu hint text to be displayed, 
+   a Status Bar has been included in the screenset and is implemented 
+   as another user control using the program SBAR.
+   
+   The following extra features are available when using class library
+   menus and toolbars instead of Dialog System menus and bitmaped buttons.
+
+	- Hint text displayed on status bar for menu items.
+	- When mouse is over a toolbar button, its associated menu hint
+	  text is displayed.
+	- Tool tips displayed when mouse is over a toolbar button.
+	- New menu items can be inserted anywhere in the menu.
+	- Implicit link between a toolbar button and its associated
+	  menu item.
+	- Menu events can be mapped directly onto COBOL code.
+
+   One of the most important differences to note when using class library
+   menus and toolbars is that each toolbar button has an associated
+   menu item. When a toolbar button is selected a menu event is generated 
+   by the class library for its associated menu item.
+   Similarly, when a menu item is enabled, disabled, checked or unchecked,
+   it's associated toolbar button is also.
+
+   This demonstration also provides an example of how to delete a toolbar
+   button when its associated menu item is deleted.
+
+
+   Files required
+   --------------
+
+   The files needed to run the demonstration program are:
+
+	Name of the file     Description of the file
+	----------------     -----------------------
+	TBARDS.GS            The demonstration screenset
+
+	TOOLB.CBL            Template source code file
+	 - strcture.cpy      Generic template source code copy file
+	 - keys.cpy          Class library key definitions
+	 - toolbdefn.cpy     Example menu and toolbar definition
+	   - tbresid.cpy     Button bitmap resource ID definitions
+	 - p2cevent.cpy      Class library event code identifier copy file
+	 - ds-call.cpy       DS Callout control block
+	 - userctrl.cpy      Dialog System runtime/Control program interface
+			     definition
+	 - tbards.cpb        Screenset data block for TBARDS screenset
+
+	TBAR.RC              Resource script defining toolbar button bitmaps
+	
+	TBAR.DLL             Resource DLL built using compiled TBAR.RC
+
+	TBARDS.TXT           This document.
+
+
+   Running The Demonstration Program
+   ---------------------------------
+   
+   Load the supplied TBAR.APP file into your Net Express IDE and select the Project,
+   Rebuild All menu choice. The project is pre-configured to run the screenset using
+   DSRUNNER, calls will be made to the controlling program in your project build directory.
+  
+
+   NOTES:
+
+   1. When using Screenset Animator to debug TBARDS.GS it is
+      advisable to edit the dialog for window WIN1 to comment out the
+      line: "TIMEOUT 25 REFRESH-STATUS-BAR" which is part of the
+      dialog for the WINDOW-CREATED event.
+
+      If this line of dialog is not commented out, then Screenset
+      Animator will loop executing the procedure "REFRESH-STATUS-BAR"
+      indefinately, as this procedure is called every 1/4 of
+      a second.
+
+  
+
+   Features
+   --------
+
+   This demonstration shows how it is possible to create and maintain a 
+   class library menu and toolbar on a Dialog System application 
+   window at run time. 
+   A status bar has been included in this demonstration for the purposes 
+   of displaying hint text. For more information on the status bar
+   function calls used by this demonstration screenset, please refer
+   to the topic "Control programs" in the help.
+
+   The demonstration illustrates the use of function based CALLOUTs to 
+   the toolbar control program TBAR.GNT. For more information on the
+   toolbar function calls used by this demonstration screenset, 
+   please refer to the topic "Control Templates" in the help.
+
+   The toolbar has been defined on the window as a User Control object
+   using the Dialog System definition software. The association between
+   the user control object and the control template, TBAR.GNT, can be  
+   seen by viewing the User Control Properties dialog box. 
+
+   At window creation time, the Dialog System runtime encounters the user
+   control object defined on the window, and calls the "create" entry point
+   in the user control's associated program - TBAR.GNT. This program places
+   the menu and toolbar defined in tbardefn.cpy on the newly created window. 
+   The copyfile tbardefn.cpy contains two data tables. The first table 
+   contains data that defines the menu bar structure, the second table
+   contains data that defines how the toolbar will look and which menu
+   items the buttons are linked to.
+
+
+   On Completion of the create process the control program registers event 
+   callback/entry point code associations with the Class Library.
+
+   The menu and toolbar in this demonstration show the use of features most
+   commonly used such as accelerator keys, menu item mnemonics, sub menus,
+   hint text and tool tips.
+
+   Menu events can be mapped onto COBOL code to handle the event, which 
+   can then send a Panels2 User Event to the window owning the menu bar 
+   if required.
+   For example, when "New" on the File pulldown is selected, a callback
+   entry point is invoked which posts a user event to the Dialog System
+   window to display a message box showing the menu text of the selected
+   item (see the entry point code for "TBAROnItemSelected" in TBARCB.CPY
+   for further information).
+
+   It should be noted that associating more than one toolbar button on 
+   the same toolbar with a single menu item may cause unpredictable results.
+   This is a Win32 API restriction, and for this reason the demonstration 
+   does not allow more than one toolbar button per menu item to be added.
+
+   When using the demo, the ADD-MENU-ITEM function button can be used to 
+   add a new menu item to the menu once the main structure of the menu 
+   has been created. To add a menu item or sub-menu to the menu bar use
+   a menu index of zero.
+   To add a new menu item to display the help dialog box do the following: 
+	
+	1. Select the "ADD-MENU-ITEM" radio button.
+	2. Enter the following values:
+		Menu index:             14 (Index of "Toggle" menu item)
+		Menu text               Help2
+		Accelerator flags:      9 (KS-VIRTUAL-KEY + KS-CTRL-PRESSED)
+		Accelerator key:        72 (ASCII value for "H")
+		Callback entry name:    TBAROnHelp
+		Menu hint text          Hint text for Help2
+
+	3. Select the "After" radio button.
+	4. Select the "Menu item" radio button.
+	5. Press the "EXECUTE FUNCTION" button to add the new menu item.
+
+	Select the "CheckMark" pull down menu to view the new menu item.
+
+
+   The ADD-TOOLBAR-BUTTON function can be used to add a new toolbar
+   button to the toolbar once the initial set of buttons has been
+   added to the toolbar at window creation time.
+   To add a new button to the toolbar and associate it with the Help2
+   menu item refered to above, do the following:
+
+	1. Select the "ADD-TOOLBAR-BUTTON" radio button.
+	2. Enter the following values:
+		Menu index              16 (Index of new "Help2" menu item)
+		Insert button before    0 (Add to end of toolbar)
+		Tool tip text           Tip for Help2
+		Resource file           tbar (Bitmaps defined in tbar.dll)
+		Resource ID             208
+	3. Press the "EXECUTE FUNCTION" button to add the new button.
+
+   To enable, disable or toggle the checkmark state of a menu item and
+   its associated toolbar button (if any), select the appropriate radio
+   button from the list of available functions and enter the menu index 
+   of the menu item required. Press the "EXECUTE FUNCTION" button.
+
+   To change the text of a menu item once created, select the
+   "UPDATE-MENU-TEXT" radio button from the list of available functions, 
+   enter its menu index, enter the new menu text in the menu text entry field 
+   and press the "EXECUTE FUNCTION" button to apply the change.
+
+   A menu item and its associated toolbar button (if any) can be deleted by
+   selecting the "DELETE-MENU-ITEM" radio button, specifying its menu index 
+   and pressing the "EXECUTE FUNCTION" button.
+
+
+   Additional comments are available in the screenset and the control
+   template source code. 
+
+  

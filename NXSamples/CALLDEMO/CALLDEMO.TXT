@@ -1,0 +1,47 @@
+   *********************************************************************
+
+                      Micro Focus Dialog System V3.0
+
+                      CALLDEMO Demonstration Program
+
+   *********************************************************************
+
+
+   CALLDEMO Demonstration Program
+   ------------------------------
+
+
+   Overview
+   --------
+
+   This CALLDEMO example uses the DSCOBCAL Dialog System Extension to call
+   the COBOL routine CBL_GET_OS_INFO to retrieve information about your
+   system. The information is then displayed in a window.
+
+   As an alternative, you can also use CALLOUT type 3 to call routines
+   such as CBL_GET_OS_INFO, since it does not return any value.
+
+
+   Files Required
+   --------------
+
+   There is no program supplied with this demonstration, it is designed for
+   use with DSRUNNER or the DS definition software.
+
+   The files needed to run the demonstration program are:
+
+   Name of the file     Description of the file
+   ----------------     -----------------------------------------------------
+     CALLDEMO.GS          The CALLDEMO screenset.
+
+     DSCOBCAL.GNT         The DSCOBCAL Dialog System Extension module.
+
+     CALLDEMO.TXT         This CALLDEMO document.
+     CALLDEMO.APP         The Net Express CALLDEMO Project file.
+
+
+   Running the Demonstration Program
+   ---------------------------------
+
+   The demonstration can be run by invoking the definition software, by using
+   DSRUNNER, or by selecting Run From the Net Express Animate menu.

@@ -1,0 +1,107 @@
+   *********************************************************************
+
+                     Micro Focus Dialog System V3.0
+
+                    Spin Button Control Demonstration
+
+   *********************************************************************
+
+
+
+   Overview
+   --------
+
+   The SPINDS.GS screenset is provided as an example of how to use the 
+   control template SPINBTN.GNT to add a spin button control object to
+   your Dialog System application.
+
+
+
+   Files required
+   --------------
+
+   The files needed to run the demonstration program are:
+
+        Name of the file     Description of the file
+        ----------------     -----------------------
+        SPINDS.GS            The demonstration screenset
+
+        SPINBTN.CBL          Template source code file
+         - ds-call.cpy       DS Callout control block
+         - p2cevent.cpy      Class library event code identifier copy file
+         - userctrl.cpy      Dialog System runtime/Control program interface
+                             definition
+         - funcdata.cpy      Generic template source code copy file
+         - strcture.cpy      ""
+         - function.cpy      ""
+         - routines.cpy      ""
+
+	SPINBTN.GNT  	     The control template program for creating
+                             and manipulating a spin button control.
+
+        SPINDS.TXT           This document.
+
+
+   Running The Demonstration Program
+   ---------------------------------
+
+   Load the supplied SPINBTN.APP file into your Net Express IDE and select the Project
+   Rebuild All menu choice. The project is pre-configured to run the screenset using
+   DSRUNNER, calls will be made to the controlling program in your project build 
+   directory.
+
+  
+   Features
+   --------
+
+   This demonstration shows how it is possible to create and maintain one
+   or many spin button controls on your Dialog System application windows
+   at run time.
+
+   The demonstration illustrates use of both CALLOUT to the spin button 
+   control template and use of the INVOKE dialog function to manipulate
+   the control. 
+
+   Each spin button has been defined on the window as a User Control object
+   using the Dialog System definition software. The association between
+   the user control objects and the control template, SPINBTN.GNT, can be  
+   seen by viewing the User Control Properties dialog box for each user 
+   control. 
+
+   At window creation time, the Dialog System runtime encounters the user
+   control objects defined on the window, and calls the "create" entry point
+   in the user control's associated program - SPINBTN.GNT. This program places
+   the spin button controls on the newly created window. 
+ 
+   The demonstration does not support the use of negative numbers in any of
+   the spin buttons, although the spin button itself does.
+
+   The entry fields used in this demonstration are not validated. This means
+   that anything can be typed into the entry fields.
+
+   The WINDOW-CREATED event has dialog associated which automatically does
+   a callout to the control template. 
+
+   The valid range for the main spin button is set by placing the required
+   values in the minimum and maximum value spin buttons, and then clicking
+   on the SetRange push button. The position of the main spin button is set
+   by placing the required values in the position spin button, and then
+   clicking on the SetPosition push button. Note that changing the value of
+   the main spin button will also change the position spin button.
+
+   The SetRange pushbutton uses the minimum and maximum range values, and
+   the SetPosition pushbutton uses the position value. The other pushbuttons
+   do not require any values to be set.
+
+   Where a pushbutton is preceded with an *, this indicates that the function
+   has been implemented using the INVOKE dialog function to directly invoke
+   the required Class Library method on the spin button object. Although
+   these functions are also implemented in the control template, and can be
+   called using the procedural CALLOUT dialog function, an example of using
+   the INVOKE dialog function has been inlcuded to make you aware that Dialog
+   System can interface directly with the Class Library.
+
+   Additional comments are available in the screenset and the control 
+   program source code. 
+
+ 

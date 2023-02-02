@@ -1,0 +1,188 @@
+   *********************************************************************
+
+		       Micro Focus Dialog System V3.0
+
+		      Status Bar Control Demonstration
+
+   *********************************************************************
+
+
+
+   Overview
+   --------
+
+   The SBARDS.GS screenset is provided as an example of how to use the 
+   control template SBAR.GNT to add a status bar control object to your
+   Dialog System application.
+
+  
+   Files required
+   --------------
+
+   The files needed to run the demonstration program are:
+
+	Name of the file     Description of the file
+	----------------     -----------------------
+	SBARDS.GS            The demonstration screenset
+
+	SBAR.CBL             Template source code file
+	 - strcture.cpy      Generic template source code copy file
+	 - winflags.cpy      Class library generic window flags copy file
+	 - p2cevent.cpy      Class library event code identifier copy file
+	 - ds-call.cpy       DS Callout control block
+	 - userctrl.cpy      Dialog System runtime/Control program interface
+				 definition
+	 - funcdata.cpy      Generic template source code copy file
+	 - evaluate.cpy      ""
+	 - function.cpy      ""
+	 - routines.cpy      "" 
+
+	SBAR.GNT             The control template program for creating and
+			     manipulating a status bar control object. 
+
+	SBARDS.TXT           This document.
+
+
+   Running The Demonstration Program
+   ---------------------------------
+   
+
+
+   Load the supplied SBAR.APP file into your Net Express IDE and select the Project
+   Rebuild All menu choice. The project is pre-configured to run the screenset using
+   DSRUNNER, calls will be made to the controlling program in your project build
+   directory
+  
+
+   NOTES:
+
+   1. When using Screenset Animator to debug SBARDS.GS it is
+      advisable to edit the dialog for window WIN1 to comment out the
+      line: "TIMEOUT 25 REFRESH-STATUS-BAR" which is part of the
+      dialog for the WINDOW-CREATED event.
+
+      If this line of dialog is not commented out, then Screenset
+      Animator will loop executing the procedure "REFRESH-STATUS-BAR"
+      indefinately, as this procedure is called every 1/4 of
+      a second.
+
+  
+
+   Features
+   --------
+
+   This demonstration shows how it is possible to create and maintain a 
+   status bar control on a Dialog System application window at run time. 
+ 
+   The demonstration illustrates use of both CALLOUT to the status
+   bar control template and use of the INVOKE dialog function to
+   manipulate the control.
+
+   The status bar has been defined on the window as a User Control object
+   using the Dialog System definition software. The association between
+   the user control object and the control template, SBAR.GNT, can be  
+   seen by viewing the User Control Properties dialog box. 
+
+   At window creation time, the Dialog System runtime encounters the user
+   control object defined on the window, and calls the "create" entry point
+   in the user control's associated program - SBAR.GNT. This program places
+   the status bar on the newly created window. 
+ 
+   The WINDOW-CREATED event has dialog which automatically performs a
+   callout to the control program to register event callback/entry point
+   code associations with the Class Library.
+
+   The status bar in this example is divided into five sections as follows:
+
+      1st section - This section is setup to display any hint text for menu
+		    items or mouse-over events on controls.
+
+		    Note: Dialog System menus do not support hint text,
+		    although hint text is displayed when you click on the 
+		    system menu for the window. Hint text can be set for 
+		    menus created by the OO GUI API class library.
+
+		    For an example of how to create a class library menu
+		    on a Dialog System window, please refer to the topic
+		    "Tool Bar Control" in your Dialog System help.
+
+      2nd section - Displays the current status of the INSERT key.
+
+      3rd section - Displays the current status of the CAPS LOCK key.
+
+      4th section - Displays the current status of the NUM LOCK key.
+
+      5th section - This last section is used to display the current system
+		    time.
+
+   This demonstration gives an example of one of the events that a status
+   bar can receive. Clicking on a particular section of the status bar with
+   the left mouse button will display a message box showing which section 
+   number (1 through 5) was clicked on (see the entry point code for 
+   "sBarButton1Down" in SBAR.CBL for further information).
+
+   The WINDOW-SIZED Dialog System event is used in this demonstration to 
+   show how the sections of the status bar can be re-sized when the status
+   bar's parent window is re-sized (see the code template procedure
+   "Resize-Status-Bar-Sections" for further information).
+
+   The Dialog System TIMEOUT function is also used here to demonstrate how
+   the key state and current system time information can be refreshed to 
+   keep the information up-to-date.
+
+   The Update push button can be used to set the text of a status bar 
+   section which is specified by the associated section text entry field. 
+   The section number to update is specified by the associated section 
+   selection box.
+
+   The Retrieve push button can be used to display in a read only entry 
+   field, the text of a status bar section. The section number to retrieve
+   from is specified by the associated section selection box.
+
+   The CLEAR-OBJECT push button removes text from all sections of the 
+   status bar apart from the sections showing the current key states
+   and time. In this example, only section 1 will be cleared.
+
+   To refresh the status bar with the current status of the INSERT, 
+   CAPS LOCK and NUM LOCK keys including the current time, click on the
+   REFRESH-OBJECT push button.
+
+   The SET-MOUSE-SHAPE push button toggles between the mouse pointer 
+   being an arrow and an hour glass while over the status bar.
+   Once the demonstration window is initially displayed, click on the
+   SET-MOUSE-SHAPE push button. Then move the mouse over part of
+   the status bar at the bottom of the window. The mouse pointer will
+   change from being an arrow, to being an hour glass while over the
+   status bar. To change the pointer back to an arrow, just click on
+   the SET-MOUSE-SHAPE push button again. You will see that moving the
+   mouse pointer over the status bar leaves the pointer as an arrow.
+
+   The SET-FONT push button sets the font used by text on the status bar
+   to SYSTEM 10 point. This demonstrates a very simple example of how
+   to set the font for a control. Note that it is the responsibility of
+   the application to finalize new fonts that have been created when they
+   are no longer needed. In this demonstration screenset the example
+   shows how to set a font and finalize it when the parent window for the
+   status bar is deleted.
+
+   Where a pushbutton is preceded with an *, this indicates that the
+   function has been implemented using the INVOKE dialog function to
+   directly invoke the required Class Library method on the status bar
+   object. Although these functions are also implemented in the control
+   template, and can be called using the procedural CALLOUT dialog 
+   function, an example of using the INVOKE dialog function has been 
+   inlcuded to make you aware that Dialog System can interface directly
+   with the Class Library.
+
+   Each of the following function push buttons perform the equivalent 
+   Dialog System functions on a status bar:
+
+     - HIDE-OBJECT
+     - SHOW-OBJECT
+
+   Additional comments are available in the screenset and the control
+   program source code. 
+
+  
+
+

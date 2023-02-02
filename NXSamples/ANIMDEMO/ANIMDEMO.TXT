@@ -1,0 +1,69 @@
+   *********************************************************************
+
+                      Micro Focus Dialog System V3.0
+
+                      ANIMDEMO Demonstration Program
+
+   *********************************************************************
+
+
+   ANIMDEMO Demonstration Program
+   ------------------------------
+
+
+   Overview
+   --------
+
+   This ANIMDEMO example shows how bitmaps and bitmapped push buttons can
+   be animated to improve the visual feedback of a user interface.
+
+
+   Files Required
+   --------------
+
+   The files needed to run the demonstration program are:
+
+   Name of the file     Description of the file
+   ----------------     -----------------------------------------------------
+     ANIMDEMO.GS          The ANIMDEMO Dialog System screenset file.
+
+     ANIMDEMO.ICN         The sidefile required by the demo.
+
+     ANIMDEMO.APP         The Net Express project file supplied with the demo.
+
+     DSSAMW32.DLL         Bitmaps and icons used by the demo.
+
+     ANIMDEMO.TXT         This ANIMDEMO document.
+
+
+   Running the Demonstration Program
+   ---------------------------------
+
+   There is no program supplied with this demonstration. The demonstration
+   can be run by invoking the definition software, by using DSRUNNER, or by
+   loading the supplied Net Express project file and using the Animate, Run
+   menu choice in the Net Express IDE.
+
+   Press on each of the bitmaps on the screenset to see the bitmaps
+   animated.
+
+
+   Features
+   --------
+
+   This demonstration shows how it is possible to attach bitmaps to push
+   buttons, and by continually refreshing the bitmap, give an animated
+   impression. Please refer to the screenset dialog for further details
+   of how this is done.
+
+
+   Extra Notes
+   -----------
+
+   When using Screenset Animator to animate ANIMDEMO.GS it is advisable
+   to edit the global dialog to comment out the line "TIMEOUT 20 INC-SCROLL"
+   which is part of the dialog for the SCREENSET-INITIALIZED event.
+
+   If this line of dialog is not commented out, then Screenset Animator
+   will loop executing the procedure "INC-SCROLL" indefinately, as this
+   procedure is called every 1/5th of a second.

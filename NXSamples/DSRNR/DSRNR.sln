@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{535C04D7-A2A5-47C7-83E0-B340A995CD1F}") = "DSRNR", "DSRNR.cblproj", "{AFD3E8CA-B44B-43C4-A787-2381816BE1D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFD3E8CA-B44B-43C4-A787-2381816BE1D5}.Debug|x86.ActiveCfg = Debug|x86
+		{AFD3E8CA-B44B-43C4-A787-2381816BE1D5}.Debug|x86.Build.0 = Debug|x86
+		{AFD3E8CA-B44B-43C4-A787-2381816BE1D5}.Release|x86.ActiveCfg = Release|x86
+		{AFD3E8CA-B44B-43C4-A787-2381816BE1D5}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

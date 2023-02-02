@@ -1,0 +1,112 @@
+   *********************************************************************
+
+                        Micro Focus Dialog System V3
+
+                        Slider Control Demonstration
+
+   *********************************************************************
+
+
+
+   Overview
+   --------
+
+   The SLDDEMO screenset is provided as an example of how to use a
+   control program to add a Slider control to your Dialog System application.
+
+
+   Files required
+   --------------
+
+   The files needed to run the demonstration program are:
+
+        Name of the file     Description of the file
+        ----------------     -----------------------
+        SLDDEMO.GS           The demonstration screenset
+        SLDDEMO.CBL          The application program
+         - slddemo.cpb       Screenset datablock copyfile
+         - ds-cntrl.mf       Dialog System Control Block copyfile
+
+        SLDDEMOSLIDER.CBL    Slider Control program
+         - slddemo.cpb       Screenset datablock copyfile
+         - strcture.cpy      Control Program interface copyfile
+         - p2cevent.cpy      Class library event code identifier copyfile
+         - userctrl.cpy      Dialog System runtime/Control program interface
+                             definition
+
+        SLIDER.APP           The Net Express project file
+
+        SLIDER.TXT           This document.
+
+
+   Running The Demonstration Program
+   ---------------------------------
+
+   Load the supplied SLIDER.APP file into your Net Express IDE and
+   select the Project/Rebuild All menu choice.
+
+
+   Features
+   --------
+
+   At window creation time, the Dialog System runtime encounters the object
+   defined on the window, and calls the "create" entry point in the controls
+   associated program. This program places the control on the newly created
+   window.
+
+   The demonstration creates a Slider Control, setting the default Min/Max
+   range, and shows how this is changed. The demonstration illustrates how
+   the control is interacted with and includes full details on configuring
+   the control and manipulating it at runtime.
+
+   The manipulation functions cover most of the functionality provided by the
+   control, in a context that Dialog System programmers will be familiar with
+   based on use of the Scroll Bar object.
+
+   Run the built application. The main window appears and the slider control is
+   set at the zero position.
+
+   The range and position manipulation functions are well documented in the
+   COBOL code and additional documentation is available for the slider class
+   via the Net Express help.
+
+
+   Adding a Slider Control to your application
+   ===========================================
+
+   This demonstration was created using the programmable Slider
+   control that you can paint on your application window, by selecting
+   the Programmed controls tab of the Dialog System toolbar palette.
+
+   When the control is painted, the Control properties dialog appears, select
+   the "Add program to current project" check box and the "Generate" push button
+   to create the control program in your project.
+
+   A single program can maintain multiple Slider Controls. You need to modify
+   the generated code in the "TO DO" comment sections of the generated program
+   These modifications are detailed below.
+
+   Screenset Data import
+   ---------------------
+
+   If you have not used the New GUI Application Wizard to create the control
+   program, you will need to import the following files contained in the
+   DialogSystem\Source directory:
+
+       FUNCDATA.IMP    The generic communication area used by all control
+                       programs
+
+   Modifications required
+   ----------------------
+
+   The generated program has comments containing "TO DO" items, and you need to
+   modify the program to enable each Slider control you use, to be correctly
+   configured to meet your requirements.
+
+   These simple modifications are well documented in the source code - search
+   for "TO DO" - and are as follows:
+
+
+       -   On creation of the control, modify the properties of the control to
+           include the range and tick frequency settings you requre.
+

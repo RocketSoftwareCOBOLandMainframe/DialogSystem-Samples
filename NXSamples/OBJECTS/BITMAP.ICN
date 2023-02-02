@@ -1,0 +1,8 @@
+[win-bitmaps]
+anim              : dssamw32.dll 140
+edit              : dssamw32.dll 141
+help              : dssamw32.dll 142
+screen            : dssamw32.dll 143
+wb                : dssamw32.dll 144
+tabctl1           : dssamw32.dll 145
+tabctl2           : dssamw32.dll 146

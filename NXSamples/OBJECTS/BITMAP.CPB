@@ -1,0 +1,51 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 BITMAP-DATA-BLOCK-VERSION-NO       PIC 9(8) COMP-5
+                                             VALUE 3.
+
+       01 BITMAP-VERSION-NO                  PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 BITMAP-SET-BUILD-NO                PIC 9(4) COMP-5
+                                             VALUE 7.
+
+       01 BITMAP-DATA-BLOCK.
+          03 BITMAP-WB-HANDLE                PIC x(4) COMP-X.
+          03 BITMAP-ANIM-HANDLE              PIC x(4) COMP-X.
+          03 BITMAP-HELP-HANDLE              PIC x(4) COMP-X.
+          03 BITMAP-SCREEN-HANDLE            PIC x(4) COMP-X.
+          03 BITMAP-EDIT-HANDLE              PIC x(4) COMP-X.
+          03 BITMAP-INFO-TEXT                PIC X(1000).
+          03 BITMAP-EXIT-FLAG                PIC 9.
+             88 BITMAP-EXIT-FLAG-TRUE        VALUE 1.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 BITMAP-FIELD-NUMBERS.
+          03 BITMAP-FLD-NO-WB-HANDLE         PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 BITMAP-FLD-NO-ANIM-HANDLE       PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 BITMAP-FLD-NO-HELP-HANDLE       PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 BITMAP-FLD-NO-SCREEN-HANDLE     PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 BITMAP-FLD-NO-EDIT-HANDLE       PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 BITMAP-FLD-NO-INFO-TEXT         PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 BITMAP-FLD-NO-EXIT-FLAG         PIC 9(4) COMP-5 VALUE
+                                               7.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

@@ -1,0 +1,75 @@
+;
+; Dialog System Resource Side File
+;
+
+;------------------ Microsoft Windows Images -------------------------------
+
+[win-bitmaps]
+face00            : dssamw32.dll 093
+face01            : dssamw32.dll 094
+face02            : dssamw32.dll 095
+face03            : dssamw32.dll 096
+face04            : dssamw32.dll 097
+eye00             : dssamw32.dll 087
+eye01             : dssamw32.dll 088
+eye02             : dssamw32.dll 089
+eye03             : dssamw32.dll 090
+eye04             : dssamw32.dll 091
+eye05             : dssamw32.dll 092
+finger00          : dssamw32.dll 105
+finger01          : dssamw32.dll 106
+finger02          : dssamw32.dll 107
+finger03          : dssamw32.dll 108
+finger04          : dssamw32.dll 109
+erase00           : dssamw32.dll 072
+erase01           : dssamw32.dll 073
+erase02           : dssamw32.dll 074
+erase03           : dssamw32.dll 075
+erase04           : dssamw32.dll 076
+erase05           : dssamw32.dll 077
+erase06           : dssamw32.dll 078
+erase07           : dssamw32.dll 079
+erase08           : dssamw32.dll 080
+erase09           : dssamw32.dll 081
+erase10           : dssamw32.dll 082
+erase11           : dssamw32.dll 083
+erase12           : dssamw32.dll 084
+erase13           : dssamw32.dll 085
+erase14           : dssamw32.dll 086
+magnet00          : dssamw32.dll 117
+magnet01          : dssamw32.dll 118
+magnet02          : dssamw32.dll 119
+magnet03          : dssamw32.dll 120
+bell00            : dssamw32.dll 060
+bell01            : dssamw32.dll 061
+bell02            : dssamw32.dll 062
+bell03            : dssamw32.dll 063
+bell04            : dssamw32.dll 064
+bell05            : dssamw32.dll 065
+bell06            : dssamw32.dll 066
+bell07            : dssamw32.dll 067
+bell08            : dssamw32.dll 068
+bell09            : dssamw32.dll 069
+bell10            : dssamw32.dll 070
+bell11            : dssamw32.dll 071
+traficr           : dssamw32.dll 123
+traficg           : dssamw32.dll 121
+traficgy          : dssamw32.dll 122
+walky             : dssamw32.dll 126
+walkd             : dssamw32.dll 124
+walkm             : dssamw32.dll 125
+file00            : dssamw32.dll 098
+file01            : dssamw32.dll 099
+file02            : dssamw32.dll 100
+file03            : dssamw32.dll 101
+file04            : dssamw32.dll 102
+file05            : dssamw32.dll 103
+file06            : dssamw32.dll 104
+animban           : dssamw32.dll 127
+flower00          : dssamw32.dll 110
+flower01          : dssamw32.dll 111
+flower02          : dssamw32.dll 112
+flower03          : dssamw32.dll 113
+flower04          : dssamw32.dll 114
+flower05          : dssamw32.dll 115
+flower06          : dssamw32.dll 116

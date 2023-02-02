@@ -1,0 +1,92 @@
+   *********************************************************************
+
+                       Micro Focus Dialog System V3.0
+
+                       SIZETEST Demonstration program
+
+   *********************************************************************
+
+
+   SIZETEST Demonstration Program 
+   ------------------------------
+
+
+   Overview
+   --------
+
+   This SIZETEST example shows how you can create Dialog System windows and their
+   gadgets which at runtime are resized appropriate to the current resolution.
+
+   The demonstration also illustrates how, by dragging a windows size border, all
+   child windows and gadgets of the resized window will be repositioned and resized
+   in relation to the change in size and position of the parent window.
+
+   Files Required
+   --------------
+
+   There is no program supplied with this demonstration. The demonstration
+   can be run by invoking the definition software, or by using DSRUNNER.
+
+   Name of the file     Description of the file
+   ----------------     -----------------------------------------------------
+     SIZETEST.GS        The Dialog System screenset.
+     SIZETEST.DFT       The font side file text format
+     SIZETEST.DFB       The font side file binary format
+
+     SIZETEST.TXT       This document
+
+     SIZETEST.APP       The Net Express project file supplied with the demo.
+
+
+   Running The Demonstration Program
+   ---------------------------------
+
+   Load the supplied Net Express project file and run the demonstration
+   by selecting Run from the Animate menu.
+
+
+   Features
+   --------
+
+   This demonstration shows how you can build Client/Server applications for 
+   deployment on multiple hardware platforms and resolutions, using a single sourced
+   Dialog System screenset.
+   
+   The supplied font side file contains three font records which at runtime redefine 
+   the font style used in the screenset. When running this screenset at resolutions
+   other than 1024*768 you should previously set the environment variables as follows:
+
+   When running at:
+
+   640*480
+   SET DSFNTENV=CONFIG1
+
+   800*600
+   SET DSFNTENV=CONFIG2
+
+   1024*769
+   (No variable required)
+
+   You may change the font side file information as required, please refer to the 
+   DS Reference manual Appendix B for full information.
+
+   This will load the appropriate font for the resolution at runtime.
+
+   Additionally, when resizing the parent window by dragging its size border you will
+   notice that all child windows and gadgets are resized and positioned appropriate to
+   the change in the parent window. To disable this feature, you may require to remove
+   the size border, by setting the feature off in the Window Properties dialog box.
+
+   Both these features are enabled by a CALLOUT to the runtime configuration module 
+   DSRTCFG, please see screenset dialog, and the DS Reference maual for full details
+   on implementation of this feature.
+
+   Limitations
+   -----------
+
+   Note that resizing a Window by dragging its size border will not automatically 
+   adjust the font sizes used by your controls. This may be implemented in a future
+   update of Dialog System, but you are able to mitigate the effects of this possibility
+   through a well laid out window design.
+
+
