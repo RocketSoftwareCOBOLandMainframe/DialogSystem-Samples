@@ -20,7 +20,8 @@
       *>                      items
       *>
       *>
-      *> Copyright (C) 1996-2000  Micro Focus International Ltd.
+      *> (C) 1996-2024 Rocket Software, Inc. or its affiliates. All    
+      *> Rights Reserved. 
       *>--------------------------------------------------------------
 
       *>------------------<CLASSS PROGRAM DEFINITION>-----------------

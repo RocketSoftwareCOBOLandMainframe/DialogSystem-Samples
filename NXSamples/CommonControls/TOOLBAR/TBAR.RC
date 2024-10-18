@@ -2,7 +2,7 @@
 #include <winver.h>
 
 #define _MFRES_INC_
-/* Micro Focus Resource File. */
+/* Resource File. */
 /* Version 4.00.017 */
 #include <mfrcwin.h>
 /*MF_BITMAP*/
@@ -51,15 +51,15 @@ BEGIN
   BEGIN
     BLOCK "04090000"            /* lang-charset : US. English, ACSII */
     BEGIN
-      VALUE "CompanyName",      "Micro Focus\0"
+      VALUE "CompanyName",      "Rocket Software\0"
       VALUE "FileDescription",  "Dialog System\0"
       VALUE "FileVersion",      "DSDM_18092008\0"
       VALUE "InternalName",     "TBAR\0"
-      VALUE "LegalCopyright",   "Copyright (C) Micro Focus 1984-2012. All rights reserved.\0"
-      VALUE "LegalTrademarks",  "See trademark information web page: http://www.microfocus.com/about/legal/index.aspx\0"
+      VALUE "LegalCopyright",   "(C) Copyright 1984-2024 Rocket Software, Inc. or its affiliates. All Rights Reserved.\0"
+      VALUE "LegalTrademarks",  "Trademark of Rocket Software, Inc or its affiliates.\0"
       VALUE "OriginalFilename", "TBAR.DLL\0"
-      VALUE "ProductName",      "Net Express 5.1\0"
-      VALUE "ProductVersion",   "5.107.0047\0"
+      VALUE "ProductName",      "Rocket COBOL 2022\0"
+      VALUE "ProductVersion",   "10.0\0"
     END
   END
   BLOCK "VarFileInfo"

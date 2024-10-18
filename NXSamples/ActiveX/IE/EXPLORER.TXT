@@ -1,6 +1,6 @@
    *********************************************************************
 
-                         Micro Focus Dialog System V3
+                               Dialog System V3
 
                    WebBrowser ActiveX Control Demonstration
 
@@ -88,9 +88,9 @@
    Run the built application. The main window appears and the main window is
    shown with the HTML page loaded. Select any of the HTML elements.
 
-   With the exception of the Micro Focus Home Page hyperlink, the HTML elements
-   perform client application navigation via the registered WebBrowser event
-   callback.
+   With the exception of the Rocket Software Home Page hyperlink, the HTML 
+   elements perform client application navigation via the registered WebBrowser
+   event callback.
 
    For these events, the application determines the URL passed with the event,
    and using known delimiters based on the element type, the relevant event can

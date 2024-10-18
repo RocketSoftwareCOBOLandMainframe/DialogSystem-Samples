@@ -23,7 +23,8 @@
       *> Otherwise, each time focus switches to the debugger, this
       *> method is invoked. If you want to run with IdleTime processing
       *> comment this section back in.
-      *> Copyright (C) 1996-2000  Micro Focus International Ltd.
+      *> (C) 1996-2024 Rocket Software, Inc. or its affiliates. All    
+      *> Rights Reserved. 
       *----------------------------------------------------------------*
 
       *-----------------< CLASS PROGRAM DEFINITION >-------------------*

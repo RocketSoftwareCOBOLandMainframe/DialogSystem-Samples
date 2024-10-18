@@ -14,7 +14,8 @@
 *> Items each with a number of SubItems.  For each SubItem there is a block
 *> of text which is displayed in the memo field when the SubItem is selected.
 *>
-*> Copyright (C) 1996-2000  Micro Focus International Ltd.
+*> (C) 1996-2024 Rocket Software, Inc. or its affiliates. All    
+*> Rights Reserved. 
 *>-----------------------------------------------------------
 
        copy 'guibase.if'.                                                *> Method prototypes.  Alternatives to the 'invoke' syntax for many methods;

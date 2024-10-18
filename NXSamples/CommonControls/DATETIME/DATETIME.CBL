@@ -1,11 +1,11 @@
       ****************************************************************
-      * Copyright (C) 1993-2003 Micro Focus International Limited.   *
-      * All rights reserved.                                         *
+      * (C) 1993-2024 Rocket Software, Inc. or its affiliates.       *
+      * All rights reserved. ROCKET SOFTWARE, INC. CONFIDENTIAL      *
       * This demonstration program is provided for use by users of   *
-      * Micro Focus products and may be used, modified and           *
+      * Rocket Software products and may be used, modified and       *
       * distributed as part of your application provided that you    *
-      * properly acknowledge the copyright of Micro Focus in this    *
-      * material.                                                    *
+      * properly acknowledge the copyright of Rocket Software in     *
+      * this material.                                               *
       ****************************************************************
 
        DATA DIVISION.

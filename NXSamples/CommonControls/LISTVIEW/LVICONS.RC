@@ -1,6 +1,6 @@
 #include "MFRES.H"
 #define _MFRES_INC_
-/* Micro Focus Resource File. */
+/* Resource File. */
 /* Version 4.00.017 */
 #include <mfrcwin.h>
 /*MF_BITMAP*/

@@ -21,7 +21,8 @@
       *  The code in this Class Program is well commented, and further   *>
       *  explanations are given as in-line comments in cols 73 onwards.  *>
       *                                                                  *>
-      *  Copyright (C) 1996-2000  Micro Focus International Ltd.
+      * (C) 1996-2024 Rocket Software, Inc. or its affiliates. All    
+      * Rights Reserved. 
       *----------------------------------------------------------------* *>
                                                                          *>
       *-----------------< CLASS PROGRAM DEFINITION >-------------------* *>

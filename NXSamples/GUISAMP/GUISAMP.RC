@@ -1,5 +1,5 @@
 #include "mfres.h"
-/* Micro Focus Resource File. */
+/* Resource File. */
 /* Version 4.00.017 */
 #include <mfrcwin.h>
 /*MF_BITMAP*/
@@ -7,7 +7,7 @@ IDB_SPLASH_SCREEN  BITMAP PRELOAD DISCARDABLE guisamp.bmp
 /*MF_CURSOR*/
 /*MF_DIALOG*/
 // #include "COMBOBOX.DLG"
-/* Micro Focus Dialog Editor generated this script */
+/* Dialog Editor generated this script */
 /* DlgEdit: Version 1.00.23 */
 
 #include <mfrcwin.h>
@@ -194,7 +194,7 @@ STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE |
 CAPTION "About This GUI Samples Application "
 FONT 8, "MS Sans Serif"
 BEGIN
-    CONTROL         "Copyright (c) Micro Focus Ltd 1996", -1, "Static", 
+    CONTROL         "(C) 1996-2024 Rocket Software, Inc. or its affiliates.", -1, "Static", 
                     SS_CENTER | WS_GROUP, 0, 120, 217, 13
     CONTROL         "OK", IDOK, "Button", WS_TABSTOP, 88, 147, 40, 14
     CONTROL         "This Application is designed to demonstrate some of the basic GUI controls, how to use them and how to code them", 
@@ -203,7 +203,7 @@ BEGIN
                     -1, "Static", SS_CENTER | WS_GROUP, 13, 52, 194, 23
     CONTROL         "You may wish to use some of the code here as the basis of your own application", 
                     -1, "Static", SS_CENTER | WS_GROUP, 13, 75, 194, 23
-    CONTROL         "Micro Focus GUI Samples Application V2.0", -1, "Button", 
+    CONTROL         "Visual COBOL GUI Samples Application V2.0", -1, "Button", 
                     BS_GROUPBOX, 5, 10, 208, 97
 END
 /*MF_ICON*/

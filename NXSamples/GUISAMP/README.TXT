@@ -130,9 +130,5 @@
    CHILDWIN.ICO (icon file for the child window)
    MFRES.H       
 
-   ========================================================================
-   Micro Focus and Net Express are registered trademarks of Micro Focus
-   International Limited
-   ========================================================================
-   Copyright (C) 1996-1998  Micro Focus International Limited
+   © 1996—2024 Rocket Software, Inc. or its affiliates.
 

@@ -1,6 +1,6 @@
    *********************************************************************
 
-                        Micro Focus Dialog System V3
+                              Dialog System V3
 
                          List Control Demonstration
 
